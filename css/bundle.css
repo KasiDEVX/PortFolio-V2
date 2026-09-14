@@ -1,5 +1,4 @@
-/* === base.css === */
-﻿:root {
+:root {
   --black: #0d0d0d;
   --black-mid: #141414;
   --cream: #e8e0ce;
@@ -23,7 +22,7 @@
   --radius-card: 32px;
   --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
   --section-space: clamp(48px, 6vw, 90px);
-  /* Tightened significantly from 64px-120px */
+  
   --nav-offset: clamp(10px, 1.8vw, 18px);
 }
 
@@ -51,17 +50,10 @@ body {
   scroll-snap-type: none;
 }
 
-
-
-/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-   ACCESSIBILITY UTILITIES
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
-/* Remove default outline for mouse clicks */
 :focus {
   outline: none;
 }
 
-/* Provide high-contrast ring for keyboard navigation */
 :focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 4px;
@@ -74,8 +66,6 @@ section,
   scroll-margin-top: 88px;
 }
 
-
-
 a {
   color: inherit;
   text-decoration: none;
@@ -87,10 +77,6 @@ img {
   border-radius: var(--radius-soft);
 }
 
-
-
-/* === loader.css === */
-﻿
 #loader {
   position: fixed;
   inset: 0;
@@ -350,7 +336,6 @@ img {
   left: 80%;
 }
 
-/* Non-GSAP fallback choreography for reveal strips */
 #page-reveal.fallback-play .reveal-strip {
   transform: translate3d(0, -120%, 0);
   transition-property: transform;
@@ -426,10 +411,6 @@ img {
   }
 }
 
-
-/* ─────────────────────────────────────────────────────────────────
-   TYPOGRAPHY TOKENS
-───────────────────────────────────────────────────────────────── */
 :root {
   --font-serif: 'Arsenica Trial Light', Georgia, serif;
   --font-sans: 'Inter', system-ui, sans-serif;
@@ -438,9 +419,6 @@ img {
 .font-arsenica { font-family: var(--font-serif); }
 .font-inter    { font-family: var(--font-sans); }
 
-/* ─────────────────────────────────────────────────────────────────
-   LIQUID GLASS UTILITY
-───────────────────────────────────────────────────────────────── */
 .liquid-glass {
   background: rgba(255, 255, 255, 0.01);
   background-blend-mode: luminosity;
@@ -475,12 +453,6 @@ img {
   pointer-events: none;
 }
 
-
-
-/* === nav-hero.css === */
-﻿/* ─────────────────────────────────────────────────────────────────
-   NAVIGATION — cinematic floating pill
-───────────────────────────────────────────────────────────────── */
 nav {
   position: fixed;
   top: 24px;
@@ -553,7 +525,6 @@ nav.scrolled {
   display: none;
 }
 
-/* Center geometric logo */
 .nav-logo-center {
   display: flex;
   align-items: center;
@@ -578,7 +549,6 @@ nav.scrolled {
   filter: drop-shadow(0 0 10px rgba(200, 169, 110, 0.45));
 }
 
-/* Contact CTA in nav */
 .nav-cta {
   display: inline-block;
   padding: 7px 18px !important;
@@ -602,7 +572,6 @@ nav.scrolled {
   transform: none !important;
 }
 
-/* Hamburger mobile */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -622,14 +591,10 @@ nav.scrolled {
   display: block;
 }
 
-/* Mobile Navigation Drawer (Hidden on Desktop) */
 .mobile-nav-menu {
   display: none;
 }
 
-/* ─────────────────────────────────────────────────────────────────
-   HERO — full-screen cinematic
-───────────────────────────────────────────────────────────────── */
 #hero {
   position: relative;
   width: 100%;
@@ -642,7 +607,6 @@ nav.scrolled {
   background: #070707;
 }
 
-/* Video background */
 .hero-video {
   position: absolute;
   inset: 0;
@@ -654,7 +618,6 @@ nav.scrolled {
   will-change: transform;
 }
 
-/* Cinematic overlay */
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -671,7 +634,6 @@ nav.scrolled {
   pointer-events: none;
 }
 
-/* Film grain — static high-craft analog texture (zero continuous GPU repaints) */
 .hero-grain {
   position: absolute;
   inset: 0;
@@ -684,7 +646,6 @@ nav.scrolled {
   background-size: 256px 256px;
 }
 
-/* Hero content */
 .hero-content {
   position: relative;
   z-index: 3;
@@ -698,7 +659,6 @@ nav.scrolled {
   width: 100%;
 }
 
-/* Eyebrow labels */
 .hero-eyebrow {
   display: flex;
   flex-direction: column;
@@ -727,7 +687,6 @@ nav.scrolled {
   margin: 0;
 }
 
-/* Main headline */
 .hero-headline-wrap {
   margin-bottom: 28px;
 }
@@ -761,7 +720,6 @@ nav.scrolled {
   display: block;
 }
 
-/* Tagline */
 .hero-tagline {
   font-family: var(--font-serif);
   font-size: clamp(0.9rem, 1.5vw, 1.1rem);
@@ -773,14 +731,12 @@ nav.scrolled {
   margin-bottom: 40px;
 }
 
-/* CTA row */
 .hero-cta-row {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Primary CTA button — liquid glass pill */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -808,7 +764,6 @@ nav.scrolled {
   transform: scale(0.98);
 }
 
-/* Ghost button kept for compatibility */
 .btn-ghost {
   display: inline-flex;
   align-items: center;
@@ -832,7 +787,6 @@ nav.scrolled {
   color: rgba(255, 255, 255, 0.95);
 }
 
-/* Scroll indicator (kept for compatibility) */
 .hero-scroll {
   position: absolute;
   bottom: 36px;
@@ -865,9 +819,6 @@ body.loaded .hero-scroll {
   animation: none;
 }
 
-/* ─────────────────────────────────────────────────────────────────
-   HERO ENTRANCE ANIMATION
-───────────────────────────────────────────────────────────────── */
 @keyframes hero-fade-up {
   from {
     opacity: 0;
@@ -885,12 +836,9 @@ body.loaded .hero-scroll {
 }
 
 body.loaded .hero-fade-up {
-  /* ensure animations fire after loader */
+  
 }
 
-/* ─────────────────────────────────────────────────────────────────
-   RESPONSIVE — NAV + HERO
-───────────────────────────────────────────────────────────────── */
 @media (max-width: 900px) {
   nav {
     padding: 12px 24px;
@@ -957,9 +905,6 @@ body.loaded .hero-fade-up {
   }
 }
 
-/* ─────────────────────────────────────────────────────────────────
-   REDUCED MOTION
-───────────────────────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -990,11 +935,7 @@ body.loaded .hero-fade-up {
   }
 }
 
-
-
-
-/* === about.css === */
-﻿@keyframes about-orb-float {
+@keyframes about-orb-float {
 
   0%,
   100% {
@@ -1055,12 +996,10 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   background: var(--cta-gold);
 }
 
-/* Scroll reveal classes — data-reveal attribute system (GSAP ScrollTrigger) */
 [data-reveal] {
-  /* Managed via hardware-accelerated GSAP transforms during reveal */
+  
 }
 
-/* Legacy .reveal support (fallback) */
 .reveal {
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
@@ -1070,9 +1009,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   transform: translateY(0) scale(1);
 }
 
-/* ─────────────────────────────────────────────────────────────────
-   ABOUT CHAPTER (EDITORIAL LUXURY ARCHITECTURE)
-───────────────────────────────────────────────────────────────── */
 #resume.about-chapter,
 #resume-card.about-chapter {
   position: relative;
@@ -1085,7 +1021,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   overflow: hidden;
 }
 
-/* Ensure about chapter contents are always visible by default before GSAP animation */
 #resume.about-chapter [data-reveal],
 #resume-card.about-chapter [data-reveal] {
   opacity: 1;
@@ -1101,7 +1036,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   padding-inline: clamp(24px, 5vw, 64px);
 }
 
-/* 1. Section Intro & Editorial Headline */
 .about-intro {
   margin-bottom: clamp(48px, 6.5vw, 80px);
 }
@@ -1144,7 +1078,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   font-family: var(--serif);
 }
 
-/* 2. Asymmetric Portrait + Bio Composition */
 .about-hero-grid {
   display: grid;
   grid-template-columns: minmax(300px, 390px) 1fr;
@@ -1205,7 +1138,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   font-size: 0.68rem;
 }
 
-/* Bio column */
 .about-bio-column {
   display: flex;
   flex-direction: column;
@@ -1241,7 +1173,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   letter-spacing: 0.01em;
 }
 
-/* Meta grid */
 .about-meta-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -1290,7 +1221,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   50% { opacity: 0.4; transform: scale(0.8); }
 }
 
-/* 3. Chapter Sub-Blocks (Capabilities, Education, Achievements) */
 .about-chapter-block {
   margin-top: clamp(64px, 8vw, 104px);
   padding-top: clamp(38px, 5vw, 60px);
@@ -1337,7 +1267,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   letter-spacing: -0.01em;
 }
 
-/* ── CAPABILITIES: Editorial Capability Index ── */
 .capability-index {
   display: flex;
   flex-direction: column;
@@ -1418,7 +1347,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   font-weight: bold;
 }
 
-/* ── EDUCATION: Editorial Timeline ── */
 .education-editorial-list {
   display: flex;
   flex-direction: column;
@@ -1517,10 +1445,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   border-radius: 100px;
 }
 
-
-
-/* === achievements.css === */
-﻿/* ── ACHIEVEMENTS: Editorial Strip ── */
 .achievements-editorial-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1587,10 +1511,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   color: rgba(232, 224, 206, 0.55);
 }
 
-
-
-/* === connect.css === */
-﻿/* ── CONNECT: Editorial Connect Bar ── */
 .about-connect-strip {
   margin-top: clamp(64px, 7.5vw, 96px);
   padding: 28px 32px;
@@ -1653,10 +1573,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   color: var(--cta-gold);
 }
 
-
-
-/* === responsive.css === */
-﻿/* ── Responsive Architecture ── */
 @media (max-width: 1024px) {
   .achievements-editorial-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1718,14 +1634,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   }
 }
 
-/* Hide custom cursor completely on mobile/tablet */
-
-/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-   GRAIN TEXTURE â€” the signature film-grain of the reference
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
-/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-   BACK TO TOP BTTN
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .back-to-top {
   position: fixed;
   bottom: 30px;
@@ -1766,7 +1674,7 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   width: 100%;
   height: 100%;
   transform: rotate(-90deg);
-  /* Start circle at 12 o'clock */
+  
 }
 
 .back-to-top__icon {
@@ -1775,15 +1683,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   font-size: 0.9rem;
 }
 
-/* Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•
-   WORK / PORTFOLIO SECTION Ã¢â‚¬â€ dark section above resume card
-Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢• */
-/* ─────────────────────────────────────────────────────────────────
-   HERO → CLOUDS → PROJECTS CONTINUOUS CINEMATIC PARALLAX TRANSITION
-───────────────────────────────────────────────────────────────── */
-
-
-/* === projects.css === */
 .projects-section,
 .next-section,
 #work.projects-section,
@@ -1799,7 +1698,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   background: transparent;
 }
 
-/* Exclude work / projects section from any top pseudo-element band */
 #work::before,
 .projects-section::before,
 .next-section::before {
@@ -1807,7 +1705,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   content: none !important;
 }
 
-/* z-index 0: PROJECTS BACKGROUND (extends softly underneath clouds into lower hero) */
 .projects-bg,
 .next-section-bg {
   position: absolute;
@@ -1825,7 +1722,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   will-change: transform;
 }
 
-/* z-index 1: SMOOTH CONTINUOUS OVERLAY (starts transparent at boundary) */
 .projects-overlay,
 .next-section-overlay {
   position: absolute;
@@ -1844,7 +1740,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   pointer-events: none;
 }
 
-/* Atmospheric Oversized Background Typography */
 .projects-watermark {
   position: absolute;
   top: clamp(60px, 8vw, 120px);
@@ -1869,7 +1764,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   white-space: nowrap;
 }
 
-/* z-index 2: PROJECTS ATMOSPHERE */
 .projects-atmosphere,
 .next-section-atmosphere {
   position: absolute;
@@ -1884,7 +1778,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   will-change: transform;
 }
 
-/* z-index 30: CLOUD TRANSITION WRAPPER AT THE EXACT HERO/PROJECTS BOUNDARY */
 .cloud-transition {
   position: absolute;
   top: 0;
@@ -1897,7 +1790,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   overflow-y: visible;
 }
 
-/* Cloud wrappers control position & scroll parallax — 50% into Hero, 50% into Projects */
 .cloud-wrapper {
   position: absolute;
   width: clamp(480px, 34vw, 680px);
@@ -1919,7 +1811,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   top: -34vh;
 }
 
-/* Cloud image styling — subtle warm amber/sunset lighting preserving full texture and detail */
 .cloud-image {
   display: block;
   width: 100%;
@@ -1937,7 +1828,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   user-select: none;
 }
 
-/* Right cloud inner wrapper (preserves natural inward orientation without transform collision) */
 .cloud-mirror {
   display: block;
   width: 100%;
@@ -1946,7 +1836,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   pointer-events: none;
 }
 
-/* Atmospheric warm sunset amber overlay for clouds */
 .cloud-left::after,
 .cloud-mirror::after {
   content: "";
@@ -1974,7 +1863,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   mask: url("../images/cloud_right_cinematic.webp") no-repeat center / contain;
 }
 
-/* z-index 10: PROJECTS CONTENT */
 .projects-content,
 .next-section-content {
   position: relative;
@@ -1983,7 +1871,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   padding-bottom: clamp(64px, 8vw, 110px);
 }
 
-/* z-index 3: ATMOSPHERIC BOTTOM MELT INTO ABOUT SECTION */
 .next-section-bottom {
   position: absolute;
   bottom: 0;
@@ -1995,7 +1882,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   pointer-events: none;
 }
 
-/* Responsive adjustments */
 @media (max-width: 1024px) {
   .cloud-wrapper {
     width: clamp(380px, 44vw, 520px);
@@ -2036,7 +1922,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   }
 }
 
-/* Reduced motion accessibility */
 @media (prefers-reduced-motion: reduce) {
   .cloud-wrapper,
   .projects-bg,
@@ -2117,9 +2002,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   line-height: 0.95;
 }
 
-/* =================================================================
-   FEATURED FLAGSHIP PROJECTS (05 & 06)
-   ================================================================= */
 .featured-projects {
   display: flex;
   flex-direction: column;
@@ -2366,7 +2248,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   transform: translateX(4px);
 }
 
-/* Visual pane */
 .featured-visual-pane {
   position: relative;
   width: 100%;
@@ -2460,9 +2341,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   box-shadow: 0 6px 20px rgba(200, 169, 110, 0.25);
 }
 
-/* =================================================================
-   OTHER PROJECTS SECTION (01, 03, 04, 06)
-   ================================================================= */
 .other-projects-section {
   margin-top: 48px;
 }
@@ -2500,7 +2378,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   font-weight: 600;
 }
 
-/* Two-column grid for secondary 4 projects */
 .other-projects-section .work-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2597,7 +2474,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-/* Title row with GitHub icon */
 .work-title-row {
   display: flex;
   align-items: center;
@@ -2678,7 +2554,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   margin-top: 20px;
 }
 
-/* GitHub button inside fullscreen modal */
 .project-modal-github {
   display: inline-flex;
   align-items: center;
@@ -2727,7 +2602,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   border-color: var(--gold);
   transform: translateY(-2px);
 }
-
 
 .work-tags-row {
   display: flex;
@@ -2785,7 +2659,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-/* Project detail modal (matches second reference composition) */
 #project-modal {
   display: none;
   position: fixed;
@@ -2830,7 +2703,7 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   height: 100%;
   object-fit: cover;
   transform: scale(1.02);
-  /* Slight scale to ensure no edge bleed */
+  
 }
 
 .project-modal-content {
@@ -2924,7 +2797,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   color: var(--gold);
 }
 
-
 #certs {
   position: relative;
   width: 100%;
@@ -2941,7 +2813,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   padding-inline: clamp(24px, 5vw, 64px);
 }
 
-/* Header */
 .certs-header {
   margin-bottom: clamp(40px, 5vw, 64px);
   max-width: 680px;
@@ -2964,7 +2835,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   line-height: 1.6;
 }
 
-/* 1. Featured Primary Certificate */
 .cert-featured-wrap {
   margin-bottom: clamp(48px, 6vw, 76px);
 }
@@ -3123,7 +2993,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   color: #fff;
 }
 
-/* 2. Secondary Certificate Collection */
 .certs-collection-wrap {
   margin-bottom: clamp(56px, 7vw, 84px);
 }
@@ -3280,7 +3149,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   opacity: 1;
 }
 
-/* 3. Coding Achievements Strip */
 .coding-achievements-wrap {
   padding-top: clamp(32px, 4vw, 48px);
   border-top: 1px solid rgba(255, 255, 255, 0.07);
@@ -3382,10 +3250,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   line-height: 1.45;
 }
 
-
-/* ─────────────────────────────────────────────────────────────
-   CINEMATIC FULL-VIEWPORT CONTACT & CLOSING SCENE
-───────────────────────────────────────────────────────────── */
 #contact {
   position: relative;
   min-height: 100vh;
@@ -3400,7 +3264,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   padding-bottom: 0;
 }
 
-/* Atmospheric Layering */
 .contact-atmosphere {
   position: absolute;
   inset: 0;
@@ -3439,7 +3302,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   display: block;
 }
 
-/* Content Container */
 .contact-container {
   position: relative;
   z-index: 2;
@@ -3461,7 +3323,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   padding-bottom: clamp(20px, 2.5vw, 36px);
 }
 
-/* Left Column: Editorial Headline & Credentials */
 .contact-left {
   display: flex;
   flex-direction: column;
@@ -3502,7 +3363,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   max-width: 44ch;
 }
 
-/* Contact Info Directory */
 .contact-info-list {
   display: flex;
   flex-direction: column;
@@ -3574,7 +3434,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   outline-offset: 3px;
 }
 
-/* Right Column: Editorial Form Card */
 .contact-form-card {
   background: rgba(18, 17, 16, 0.72);
   border: 1px solid rgba(255, 255, 255, 0.09);
@@ -3749,10 +3608,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   font-size: 1.15rem;
 }
 
-
-
-/* === footer.css === */
-/* Howitzer-Inspired Modern Footer */
 .contact-footer-bar {
   position: relative;
   z-index: 3;
@@ -3776,7 +3631,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   flex-direction: column;
 }
 
-/* Top Grid: Bio/Statement & Squircles on Left + Grouped Columns on Right */
 .footer-top-grid {
   display: grid;
   grid-template-columns: 1.15fr 1.85fr;
@@ -3836,7 +3690,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   outline-offset: 3px;
 }
 
-/* Right Columns with Top Lines */
 .footer-nav-columns {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -3912,7 +3765,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   line-height: 1;
 }
 
-/* Middle Section: Giant Outlined Brand Wordmark (Upper Half Only) with Interactive Terminal Trigger */
 .footer-brand-stage {
   position: relative;
   width: 100%;
@@ -3967,14 +3819,12 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   transition: -webkit-text-stroke 0.3s ease, opacity 0.3s ease;
 }
 
-/* Wordmark stays matte and clean on hover; hover effect is presented strictly via custom mouse cursor */
 .footer-brand-stage:hover .footer-giant-wordmark,
 .footer-brand-stage:focus-visible .footer-giant-wordmark {
   -webkit-text-stroke: 1.5px rgba(220, 192, 138, 0.85);
   opacity: 1;
 }
 
-/* Bottom Row */
 .footer-meta-row {
   display: flex;
   align-items: center;
@@ -4017,7 +3867,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   outline: 1px solid var(--cta-gold);
   outline-offset: 2px;
 }
-
 
 #lightbox {
   display: none;
@@ -4088,9 +3937,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   color: var(--gold);
 }
 
-/* Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•
-   RESPONSIVE
-Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢• */
 @media (max-width: 1024px) {
   :root {
     --nav-offset: 12px;
@@ -4177,7 +4023,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
     display: none !important;
   }
 
-  /* Mobile Navigation Fullscreen Drawer */
   .mobile-nav-menu {
     display: flex !important;
     position: fixed;
@@ -4490,7 +4335,7 @@ section:not(#hero):not(#work):not(.projects-section)::before {
 
   .hero-tagline {
     margin-top: 16px;
-    /* Reset the negative margin from desktop */
+    
   }
 
   .name-pill {
@@ -4582,7 +4427,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
     font-size: clamp(3.5rem, 16vw, 17.5rem);
   }
 
-
 }
 
 @media (max-width: 480px) {
@@ -4632,8 +4476,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   }
 }
 
-
-
 @keyframes fade-up {
   to {
     opacity: 1;
@@ -4641,7 +4483,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   }
 }
 
-/* Dot rating component */
 .dot {
   width: 7px;
   height: 7px;
@@ -4656,15 +4497,12 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   background: var(--dot-empty);
 }
 
-
-/* === cursor.css === */
-﻿================================================== */
 .custom-cursor {
   display: none;
 }
 
 @media (hover: hover) and (pointer: fine) {
-  /* Completely hide Windows / system cursor on fine-pointer desktop devices */
+  
   *,
   *::before,
   *::after,
@@ -4744,18 +4582,15 @@ section:not(#hero):not(#work):not(.projects-section)::before {
     user-select: none;
   }
 
-  /* Tactile impulse on mouse clicks */
   .custom-cursor.is-clicking .cursor-pointer-svg {
     transform: scale(0.9) translate(1px, 1px);
   }
 
-  /* Interactive: Links, Buttons, Inputs, Controls */
   .custom-cursor.is-hovering .cursor-pointer-svg {
     transform: scale(1.08) rotate(-4deg);
     filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.6));
   }
 
-  /* Contextual Editorial Badge */
   .cursor-badge {
     position: absolute;
     left: 22px;
@@ -4786,7 +4621,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
     line-height: 1;
   }
 
-  /* Interactive Contextual States */
   .custom-cursor.is-view .cursor-badge,
   .custom-cursor.is-look .cursor-badge,
   .custom-cursor.is-drag .cursor-badge,
@@ -4799,7 +4633,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
     transform: translateY(0) scale(1);
   }
 
-  /* Secret Badge on giant KASI wordmark */
   .custom-cursor.is-secret .cursor-badge {
     background: rgba(18, 16, 12, 0.96);
     border-color: rgba(200, 169, 110, 0.7);
@@ -4807,35 +4640,30 @@ section:not(#hero):not(#work):not(.projects-section)::before {
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
   }
 
-  /* Copy Badge on email */
   .custom-cursor.is-copy .cursor-badge {
     background: rgba(10, 24, 18, 0.95);
     border-color: rgba(16, 185, 129, 0.6);
     color: #a7f3d0;
   }
 
-  /* Visit Badge on external live links */
   .custom-cursor.is-visit .cursor-badge {
     background: rgba(12, 18, 30, 0.95);
     border-color: rgba(59, 130, 246, 0.6);
     color: #bfdbfe;
   }
 
-  /* Look Badge on certs */
   .custom-cursor.is-look .cursor-badge {
     background: rgba(26, 16, 32, 0.95);
     border-color: rgba(192, 132, 252, 0.6);
     color: #e9d5ff;
   }
 
-  /* Interactive: Modal Close */
   .custom-cursor.is-close .cursor-badge {
     background: #e11d48;
     border-color: rgba(255, 255, 255, 0.3);
   }
 }
 
-/* Reduced Motion: Disable custom cursor and restore native cursor */
 @media (prefers-reduced-motion: reduce) {
   .custom-cursor {
     display: none !important;
@@ -4859,10 +4687,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   }
 }
 
-/* ==================================================
-   LITE MODE: LOW-OVERHEAD HIGH-PERFORMANCE PROFILES
-   (Preserves 100% of content, visuals, layouts, & navigation)
-================================================== */
 body.lite-mode {
   --ease-smooth: ease-out;
 }
@@ -4900,9 +4724,6 @@ body.lite-mode .btn-form-submit {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
 }
 
-/* ==================================================
-   FLOATING LIVE TIME PILL (Choice B: Top-Left Luxury Glass)
-================================================== */
 .floating-time-pill {
   position: fixed;
   top: 24px;
@@ -4972,9 +4793,6 @@ body.lite-mode .btn-form-submit {
   }
 }
 
-/* ==================================================
-   TOP-RIGHT LUXURY NOTIFICATION TOAST STACK
-================================================== */
 .toast-container {
   position: fixed;
   top: 24px;
@@ -5077,10 +4895,6 @@ body.lite-mode .btn-form-submit {
   }
 }
 
-/* ==================================================
-   SECRET KASI CYBER TERMINAL MODAL (Type 'KASI')
-   Spacious Fastfetch Rice Edition • Attack on Titan Wings of Freedom
-================================================== */
 .kasi-terminal-modal {
   position: fixed;
   inset: 0;
@@ -5109,10 +4923,6 @@ body.lite-mode .btn-form-submit {
   -webkit-backdrop-filter: blur(18px);
 }
 
-
-
-/* === terminal.css === */
-﻿/* Expanded Window Architecture (Editorial Luxury Archival Aesthetic) */
 .terminal-window {
   position: relative;
   width: 100%;
@@ -5138,7 +4948,6 @@ body.lite-mode .btn-form-submit {
   transform: scale(1) translateY(0);
 }
 
-/* Luxury Window Titlebar */
 .terminal-header {
   display: flex;
   align-items: center;
@@ -5236,7 +5045,6 @@ body.lite-mode .btn-form-submit {
   color: #ef4444;
 }
 
-/* Terminal Body Scroll Container */
 .terminal-body {
   padding: clamp(18px, 2.5vw, 26px);
   overflow-y: auto;
@@ -5246,7 +5054,6 @@ body.lite-mode .btn-form-submit {
   flex: 1;
 }
 
-/* Rice Dual-Column Architecture */
 .terminal-rice-layout {
   display: grid;
   grid-template-columns: 260px 1fr;
@@ -5254,7 +5061,6 @@ body.lite-mode .btn-form-submit {
   align-items: center;
 }
 
-/* Left Column: Attack on Titan Wings of Freedom with Cloud Filter */
 .terminal-rice-left {
   display: flex;
   flex-direction: column;
@@ -5276,7 +5082,6 @@ body.lite-mode .btn-form-submit {
   padding: 8px;
 }
 
-/* Cloud filter applied to AOT emblem as requested */
 .aot-emblem-img {
   width: 100%;
   max-width: 210px;
@@ -5333,7 +5138,6 @@ body.lite-mode .btn-form-submit {
   margin-top: 3px;
 }
 
-/* Right Column: Fastfetch ASCII/Unicode Rice Boxes */
 .terminal-rice-right {
   display: flex;
   flex-direction: column;
@@ -5457,7 +5261,6 @@ body.lite-mode .btn-form-submit {
   font-style: italic;
 }
 
-/* Site Color Palette Swatches */
 .rice-dots-row {
   display: flex;
   align-items: center;
@@ -5480,7 +5283,6 @@ body.lite-mode .btn-form-submit {
   border-color: rgba(255, 255, 255, 0.45);
 }
 
-/* Interactive Output & Prompt Section */
 .terminal-interactive-pane {
   display: flex;
   flex-direction: column;
@@ -5569,7 +5371,6 @@ body.lite-mode .btn-form-submit {
   border-radius: 0 6px 6px 0;
 }
 
-/* Prompt Line */
 .terminal-prompt-form {
   display: flex;
   align-items: center;
@@ -5617,7 +5418,6 @@ body.lite-mode .btn-form-submit {
   flex-shrink: 0;
 }
 
-/* Terminal Responsive Behavior */
 @media (max-width: 768px) {
   .terminal-header {
     padding: 10px 14px;

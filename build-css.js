@@ -28,15 +28,19 @@ function buildBundle() {
         console.warn(`[WARN] Missing file: ${file}`);
         return '';
       }
-      const content = fs.readFileSync(filePath, 'utf8');
-      return `/* === ${file} === */\n${content}`;
+      let content = fs.readFileSync(filePath, 'utf8');
+      // Strip all CSS comments (/* ... */)
+      content = content.replace(/\/\*[\s\S]*?\*\//g, '');
+      // Clean up excess blank lines
+      content = content.replace(/\n\s*\n\s*\n/g, '\n\n').trim();
+      return content;
     });
 
-    const bundleContent = parts.join('\n\n');
+    const bundleContent = parts.filter(Boolean).join('\n\n') + '\n';
     fs.writeFileSync(BUNDLE_FILE, bundleContent, 'utf8');
     const elapsed = Date.now() - startTime;
     const sizeKB = (Buffer.byteLength(bundleContent, 'utf8') / 1024).toFixed(1);
-    console.log(`[${new Date().toLocaleTimeString()}] \x1b[32m✔ bundle.css built\x1b[0m (${sizeKB} KB) in ${elapsed}ms`);
+    console.log(`[${new Date().toLocaleTimeString()}] \x1b[32m✔ bundle.css built (comments stripped, ${sizeKB} KB) in ${elapsed}ms\x1b[0m`);
   } catch (err) {
     console.error(`\x1b[31m[ERROR] Failed to build bundle:\x1b[0m`, err);
   }
