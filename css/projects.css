@@ -1,4 +1,4 @@
-﻿.projects-section,
+.projects-section,
 .next-section,
 #work.projects-section,
 #work.next-section {
@@ -179,13 +179,13 @@
 }
 
 .cloud-left::after {
-  -webkit-mask: url("images/cloud_left_cinematic.webp") no-repeat center / contain;
-  mask: url("images/cloud_left_cinematic.webp") no-repeat center / contain;
+  -webkit-mask: url("../images/cloud_left_cinematic.webp") no-repeat center / contain;
+  mask: url("../images/cloud_left_cinematic.webp") no-repeat center / contain;
 }
 
 .cloud-mirror::after {
-  -webkit-mask: url("images/cloud_right_cinematic.webp") no-repeat center / contain;
-  mask: url("images/cloud_right_cinematic.webp") no-repeat center / contain;
+  -webkit-mask: url("../images/cloud_right_cinematic.webp") no-repeat center / contain;
+  mask: url("../images/cloud_right_cinematic.webp") no-repeat center / contain;
 }
 
 /* z-index 10: PROJECTS CONTENT */

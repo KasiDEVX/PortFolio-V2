@@ -60,35 +60,32 @@
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#0d0d0d">
 
-  <!-- Preload critical above-fold assets -->
-  <link rel="preload" as="video"
-    href="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260611_130946_e6793cc7-6b6f-4035-9852-44290b781ae6.mp4"
-    type="video/mp4">
+  <!-- Preload critical above-fold cloud images -->
   <link rel="preload" as="image" href="images/cloud_left_cinematic.webp" type="image/webp">
   <link rel="preload" as="image" href="images/cloud_right_cinematic.webp" type="image/webp">
 
-  <link rel="preload"
-    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@1&family=DM+Sans:wght@400;600&display=swap"
-    as="style">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@1&family=DM+Sans:wght@400;600&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- Modular CSS — load order matches original style.css top-to-bottom -->
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/loader.css">
-  <link rel="stylesheet" href="css/nav-hero.css">
-  <link rel="stylesheet" href="css/about.css">
-  <link rel="stylesheet" href="css/achievements.css">
-  <link rel="stylesheet" href="css/connect.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link rel="stylesheet" href="css/projects.css">
-  <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="css/cursor.css">
-  <link rel="stylesheet" href="css/terminal.css">
-  <link rel="stylesheet"
-    href="https://db.onlinewebfonts.com/c/cbb3cb559d2e4387e139cfb1656e31f5?family=Arsenica+Trial+Light">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap">
+  <!-- Critical Above-Fold CSS inlined for instant First Contentful Paint (<0.4s) -->
+  <style>
+    :root { --black: #0d0d0d; --bg: #0d0d0d; --text: #e8e0ce; --gold: #c8a96e; }
+    html, body { margin: 0; padding: 0; background: #0d0d0d; color: #e8e0ce; overflow-x: hidden; }
+    #loader { position: fixed; inset: 0; background: #0d0d0d; z-index: 10000; overflow: hidden; will-change: opacity, transform; }
+    #loader.hide { opacity: 0; pointer-events: none; transform: translateZ(0); }
+    .loader-scene { position: relative; width: 100%; height: 100%; display: grid; place-items: center; isolation: isolate; background: radial-gradient(circle at 50% 38%, rgba(200, 169, 110, 0.1), rgba(13, 13, 13, 0) 42%); }
+    .loader-logo { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+    .loader-word { font-family: system-ui, -apple-system, sans-serif; font-size: 32px; font-weight: 700; letter-spacing: 0.15em; color: #e8e0ce; text-transform: uppercase; }
+  </style>
+
+  <!-- Google Fonts with display=swap -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@1&family=DM+Sans:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Production Consolidated Stylesheet (single request, eliminates 10 render-blocking roundtrips) -->
+  <link rel="stylesheet" href="css/bundle.css">
+
+  <!-- Asynchronous Non-Critical Stylesheets (Font Awesome & Decorative Web Fonts) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+  <link rel="stylesheet" href="https://db.onlinewebfonts.com/c/cbb3cb559d2e4387e139cfb1656e31f5?family=Arsenica+Trial+Light" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://db.onlinewebfonts.com/c/cbb3cb559d2e4387e139cfb1656e31f5?family=Arsenica+Trial+Light"></noscript>
 </head>
 
 <body id="page-top">
@@ -473,7 +470,7 @@
               <span class="work-num">04</span>
               <div class="work-card-media">
                 <img src="images/work_3_md.webp" alt="Random Queue Generator" loading="lazy" fetchpriority="low"
-                  decoding="async">
+                  decoding="async" width="1920" height="995">
               </div>
               <div class="work-info">
                 <div class="work-tags-row">
@@ -536,7 +533,7 @@
               <span class="work-num">06</span>
               <div class="work-card-media">
                 <img src="images/work_6_placeholder.webp" alt="CI/CD Poisoning Detector" loading="lazy"
-                  fetchpriority="low" decoding="async">
+                  fetchpriority="low" decoding="async" width="1920" height="967">
               </div>
               <div class="work-info">
                 <div class="work-tags-row">
@@ -583,7 +580,7 @@
         <div class="about-portrait-wrap" data-reveal="fade-up">
           <div class="about-portrait-frame">
             <img src="images/about.webp" alt="Portrait of Kasi Vishwanathan" class="about-portrait-img" loading="eager"
-              fetchpriority="high" decoding="async" />
+              fetchpriority="high" decoding="async" width="941" height="1672" />
             <div class="about-portrait-caption">
               <span class="caption-name">KASI VISHWANATHAN P</span>
               <span class="caption-role">DESIGN / DEVELOPMENT</span>
@@ -753,7 +750,7 @@
               <span class="edu-counter">01</span>
               <div class="edu-crest-wrap">
                 <img src="images/college-logo.webp" alt="Ramco Institute of Technology" class="edu-crest"
-                  loading="lazy" />
+                  loading="lazy" width="71" height="105" />
               </div>
               <div class="edu-info">
                 <h4 class="edu-institute">Ramco Institute of Technology</h4>
@@ -875,7 +872,7 @@
           <div class="cert-primary-inner">
             <div class="cert-img-wrap cert-primary-img-wrap">
               <img src="images/metafrontend.webp" alt="Meta Introduction to Front-End Development Certificate"
-                loading="lazy" decoding="async">
+                loading="lazy" decoding="async" width="1536" height="1024">
               <div class="cert-zoom-pill">
                 <i class="fas fa-expand-alt" aria-hidden="true"></i>
                 <span>View Full Credential</span>
@@ -919,7 +916,7 @@
               <div class="cert-issuer-row">
                 <span class="cert-issuer">AWS / Forage</span>
               </div>
-              <h4 class="cert-name">AWS Solutions Architecture</h4>
+              <h3 class="cert-name">AWS Solutions Architecture</h3>
               <p class="cert-desc">Completed AWS Solutions Architecture Virtual Experience Program on Forage platform.
               </p>
             </div>
@@ -930,14 +927,14 @@
             role="button" aria-label="Open certificate details: Programming In Java (Elite)">
             <div class="cert-img-wrap">
               <img src="images/nptel.webp" alt="Programming In Java — NPTEL IIT Kharagpur" loading="lazy"
-                decoding="async">
+                decoding="async" width="2552" height="1828">
               <div class="cert-zoom-icon"><i class="fas fa-expand-alt" aria-hidden="true"></i></div>
             </div>
             <div class="cert-body">
               <div class="cert-issuer-row">
                 <span class="cert-issuer">NPTEL &middot; IIT Kharagpur</span>
               </div>
-              <h4 class="cert-name">Programming In Java</h4>
+              <h3 class="cert-name">Programming In Java</h3>
               <p class="cert-desc">Elite 12-week certification in Java, OOP, and data structures (Score: 91%).</p>
             </div>
           </div>
@@ -947,14 +944,14 @@
             tabindex="0" role="button" aria-label="Open certificate details: Store Listing Certificate">
             <div class="cert-img-wrap">
               <img src="images/googleplay listing.webp" alt="Google Play Store Listing Certificate" loading="lazy"
-                decoding="async">
+                decoding="async" width="792" height="612">
               <div class="cert-zoom-icon"><i class="fas fa-expand-alt" aria-hidden="true"></i></div>
             </div>
             <div class="cert-body">
               <div class="cert-issuer-row">
                 <span class="cert-issuer">Google Play Academy</span>
               </div>
-              <h4 class="cert-name">Store Listing Certificate</h4>
+              <h3 class="cert-name">Store Listing Certificate</h3>
               <p class="cert-desc">Certified in Google Play Store listing optimization and policy compliance.</p>
             </div>
           </div>
@@ -965,14 +962,14 @@
             aria-label="Open certificate details: AWS Cloud Quest Cloud Practitioner">
             <div class="cert-img-wrap">
               <img src="images/Aws cloud  practioner.webp" alt="AWS Cloud Quest: Cloud Practitioner" loading="lazy"
-                decoding="async">
+                decoding="async" width="601" height="601">
               <div class="cert-zoom-icon"><i class="fas fa-expand-alt" aria-hidden="true"></i></div>
             </div>
             <div class="cert-body">
               <div class="cert-issuer-row">
                 <span class="cert-issuer">Amazon Web Services</span>
               </div>
-              <h4 class="cert-name">AWS Cloud Practitioner</h4>
+              <h3 class="cert-name">AWS Cloud Practitioner</h3>
               <p class="cert-desc">Cloud Quest trained certification covering AWS cloud computing fundamentals.</p>
             </div>
           </div>
@@ -988,7 +985,7 @@
               <div class="cert-issuer-row">
                 <span class="cert-issuer">LinkedIn Learning</span>
               </div>
-              <h4 class="cert-name">Prompt Engineering</h4>
+              <h3 class="cert-name">Prompt Engineering</h3>
               <p class="cert-desc">LinkedIn AI Prompt Mastery Certificate.</p>
             </div>
           </div>
@@ -1004,7 +1001,7 @@
               <div class="cert-issuer-row">
                 <span class="cert-issuer">TATA / Forage</span>
               </div>
-              <h4 class="cert-name">TATA Cybersecurity Analyst</h4>
+              <h3 class="cert-name">TATA Cybersecurity Analyst</h3>
               <p class="cert-desc">Completed TATA Cybersecurity Virtual Experience Program.</p>
             </div>
           </div>
@@ -1020,7 +1017,7 @@
               <div class="cert-issuer-row">
                 <span class="cert-issuer">FreeCodeCamp</span>
               </div>
-              <h4 class="cert-name">Bootstrap Certificate</h4>
+              <h3 class="cert-name">Bootstrap Certificate</h3>
               <p class="cert-desc">Completed Bootstrap course on FreeCodeCamp platform.</p>
             </div>
           </div>
@@ -1036,7 +1033,7 @@
               <div class="cert-issuer-row">
                 <span class="cert-issuer">FreeCodeCamp</span>
               </div>
-              <h4 class="cert-name">HTML &amp; CSS Certificate</h4>
+              <h3 class="cert-name">HTML &amp; CSS Certificate</h3>
               <p class="cert-desc">Mastered Responsive Web Design on FreeCodeCamp.</p>
             </div>
           </div>
@@ -1245,7 +1242,7 @@
 
 
             <div class="footer-nav-col">
-              <h4 class="footer-col-heading">Work</h4>
+              <p class="footer-col-heading">Work</p>
               <ul class="footer-col-list">
                 <li><a href="#work" class="footer-col-link">Selected Projects</a></li>
                 <li><a href="#work" class="footer-col-link">Case Studies</a></li>
@@ -1255,7 +1252,7 @@
 
 
             <div class="footer-nav-col">
-              <h4 class="footer-col-heading">Explore</h4>
+              <p class="footer-col-heading">Explore</p>
               <ul class="footer-col-list">
                 <li><a href="#resume" class="footer-col-link">About Me</a></li>
                 <li><a href="#resume" class="footer-col-link">Experience</a></li>
@@ -1265,7 +1262,7 @@
 
 
             <div class="footer-nav-col">
-              <h4 class="footer-col-heading">Connect</h4>
+              <p class="footer-col-heading">Connect</p>
               <ul class="footer-col-list">
                 <li><a href="#contact" class="footer-col-link">Contact Form</a></li>
                 <li><a href="mailto:kasi.offcl@gmail.com" class="footer-col-link">kasi.offcl@gmail.com</a></li>
