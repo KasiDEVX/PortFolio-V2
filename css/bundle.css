@@ -1,5 +1,5 @@
-﻿/* === base.css === */
-:root {
+/* === base.css === */
+﻿:root {
   --black: #0d0d0d;
   --black-mid: #141414;
   --cream: #e8e0ce;
@@ -90,7 +90,7 @@ img {
 
 
 /* === loader.css === */
-
+﻿
 #loader {
   position: fixed;
   inset: 0;
@@ -478,7 +478,7 @@ img {
 
 
 /* === nav-hero.css === */
-/* ─────────────────────────────────────────────────────────────────
+﻿/* ─────────────────────────────────────────────────────────────────
    NAVIGATION — cinematic floating pill
 ───────────────────────────────────────────────────────────────── */
 nav {
@@ -994,7 +994,7 @@ body.loaded .hero-fade-up {
 
 
 /* === about.css === */
-@keyframes about-orb-float {
+﻿@keyframes about-orb-float {
 
   0%,
   100% {
@@ -1520,7 +1520,7 @@ section:not(#hero):not(#work):not(.projects-section)::before {
 
 
 /* === achievements.css === */
-/* ── ACHIEVEMENTS: Editorial Strip ── */
+﻿/* ── ACHIEVEMENTS: Editorial Strip ── */
 .achievements-editorial-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1590,7 +1590,7 @@ section:not(#hero):not(#work):not(.projects-section)::before {
 
 
 /* === connect.css === */
-/* ── CONNECT: Editorial Connect Bar ── */
+﻿/* ── CONNECT: Editorial Connect Bar ── */
 .about-connect-strip {
   margin-top: clamp(64px, 7.5vw, 96px);
   padding: 28px 32px;
@@ -1656,7 +1656,7 @@ section:not(#hero):not(#work):not(.projects-section)::before {
 
 
 /* === responsive.css === */
-/* ── Responsive Architecture ── */
+﻿/* ── Responsive Architecture ── */
 @media (max-width: 1024px) {
   .achievements-editorial-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1897,7 +1897,7 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   overflow-y: visible;
 }
 
-/* Cloud wrappers control position & scroll parallax â€” 50% into Hero, 50% into Projects */
+/* Cloud wrappers control position & scroll parallax — 50% into Hero, 50% into Projects */
 .cloud-wrapper {
   position: absolute;
   width: clamp(480px, 34vw, 680px);
@@ -1919,7 +1919,7 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   top: -34vh;
 }
 
-/* Cloud image styling â€” subtle warm amber/sunset lighting preserving full texture and detail */
+/* Cloud image styling — subtle warm amber/sunset lighting preserving full texture and detail */
 .cloud-image {
   display: block;
   width: 100%;
@@ -3383,9 +3383,9 @@ section:not(#hero):not(#work):not(.projects-section)::before {
 }
 
 
-/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+/* ─────────────────────────────────────────────────────────────
    CINEMATIC FULL-VIEWPORT CONTACT & CLOSING SCENE
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+───────────────────────────────────────────────────────────── */
 #contact {
   position: relative;
   min-height: 100vh;
@@ -4634,9 +4634,6 @@ section:not(#hero):not(#work):not(.projects-section)::before {
 
 
 
-/* Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•
-   UTILITIES
-Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢•Ã¢• */
 @keyframes fade-up {
   to {
     opacity: 1;
@@ -4659,12 +4656,9 @@ section:not(#hero):not(#work):not(.projects-section)::before {
   background: var(--dot-empty);
 }
 
-/* ==================================================
-   CUSTOM GEOMETRIC ARROW CURSOR (Fine-pointer Desktop Only)
-
 
 /* === cursor.css === */
-================================================== */
+﻿================================================== */
 .custom-cursor {
   display: none;
 }
@@ -5118,7 +5112,7 @@ body.lite-mode .btn-form-submit {
 
 
 /* === terminal.css === */
-/* Expanded Window Architecture (Editorial Luxury Archival Aesthetic) */
+﻿/* Expanded Window Architecture (Editorial Luxury Archival Aesthetic) */
 .terminal-window {
   position: relative;
   width: 100%;
@@ -5691,4 +5685,3 @@ body.lite-mode .btn-form-submit {
     width: 74px;
   }
 }
-

@@ -1,0 +1,11 @@
+{
+  "name": "portfolio-v2",
+  "version": "2.0.0",
+  "description": "Kasi Vishwanathan — Portfolio 2026",
+  "scripts": {
+    "build": "node build-css.js",
+    "watch": "node build-css.js --watch"
+  },
+  "author": "Kasi Vishwanathan",
+  "license": "MIT"
+}
