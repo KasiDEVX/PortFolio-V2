@@ -19,6 +19,15 @@ const CSS_FILES = [
   'terminal.css'
 ];
 
+function minifyCSS(css) {
+  return css
+    .replace(/\/\*[\s\S]*?\*\//g, '')
+    .replace(/\s+/g, ' ')
+    .replace(/\s*([\{\}\:\;\,])\s*/g, '$1')
+    .replace(/\;(?=\})/g, '')
+    .trim();
+}
+
 function buildBundle() {
   const startTime = Date.now();
   try {
@@ -28,19 +37,15 @@ function buildBundle() {
         console.warn(`[WARN] Missing file: ${file}`);
         return '';
       }
-      let content = fs.readFileSync(filePath, 'utf8');
-      // Strip all CSS comments (/* ... */)
-      content = content.replace(/\/\*[\s\S]*?\*\//g, '');
-      // Clean up excess blank lines
-      content = content.replace(/\n\s*\n\s*\n/g, '\n\n').trim();
-      return content;
+      return fs.readFileSync(filePath, 'utf8');
     });
 
-    const bundleContent = parts.filter(Boolean).join('\n\n') + '\n';
-    fs.writeFileSync(BUNDLE_FILE, bundleContent, 'utf8');
+    const concatenated = parts.filter(Boolean).join('\n');
+    const minified = minifyCSS(concatenated);
+    fs.writeFileSync(BUNDLE_FILE, minified, 'utf8');
     const elapsed = Date.now() - startTime;
-    const sizeKB = (Buffer.byteLength(bundleContent, 'utf8') / 1024).toFixed(1);
-    console.log(`[${new Date().toLocaleTimeString()}] \x1b[32m✔ bundle.css built (comments stripped, ${sizeKB} KB) in ${elapsed}ms\x1b[0m`);
+    const sizeKB = (Buffer.byteLength(minified, 'utf8') / 1024).toFixed(1);
+    console.log(`[${new Date().toLocaleTimeString()}] \x1b[32m✔ bundle.css built (minified, ${sizeKB} KB) in ${elapsed}ms\x1b[0m`);
   } catch (err) {
     console.error(`\x1b[31m[ERROR] Failed to build bundle:\x1b[0m`, err);
   }

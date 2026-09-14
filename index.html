@@ -52,6 +52,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.higgs.ai">
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
   <link rel="dns-prefetch" href="https://unpkg.com">
   <link rel="dns-prefetch" href="https://db.onlinewebfonts.com">
@@ -60,8 +61,8 @@
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#0d0d0d">
 
-  <!-- Preload critical above-fold cloud images -->
-  <link rel="preload" as="image" href="images/cloud_left_cinematic.webp" type="image/webp">
+  <!-- Preload critical above-fold cloud images with LCP priority -->
+  <link rel="preload" as="image" href="images/cloud_left_cinematic.webp" type="image/webp" fetchpriority="high">
   <link rel="preload" as="image" href="images/cloud_right_cinematic.webp" type="image/webp">
 
   <!-- Critical Above-Fold CSS inlined for instant First Contentful Paint (<0.4s) -->
@@ -188,7 +189,7 @@
   <section id="hero" aria-label="Hero">
 
 
-    <video class="hero-video" autoplay muted loop playsinline webkit-playsinline preload="metadata" aria-hidden="true">
+    <video class="hero-video" autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="images/AOT_clean.webp" aria-hidden="true">
       <source
         src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260611_130946_e6793cc7-6b6f-4035-9852-44290b781ae6.mp4"
         type="video/mp4">
@@ -240,7 +241,7 @@
 
     <div class="cloud-transition" aria-hidden="true">
       <div class="cloud-wrapper cloud-left">
-        <img class="cloud-image" src="images/cloud_left_cinematic.webp" alt="" loading="eager" decoding="async" width="1024" height="1024" />
+        <img class="cloud-image" src="images/cloud_left_cinematic.webp" alt="" loading="eager" fetchpriority="high" decoding="async" width="1024" height="1024" />
       </div>
 
       <div class="cloud-wrapper cloud-right">
@@ -329,7 +330,7 @@
 
               <div class="featured-visual-pane">
                 <div class="featured-image-frame">
-                  <img src="images/work_5_placeholder.webp" alt="The Atelier" loading="lazy" decoding="async" width="1920" height="967">
+                  <img src="images/work_5_placeholder.webp" alt="The Atelier" loading="lazy" decoding="async" width="1000" height="503">
                   <div class="featured-visual-overlay"></div>
                 </div>
               </div>
@@ -400,7 +401,7 @@
 
               <div class="featured-visual-pane">
                 <div class="featured-image-frame">
-                  <img src="images/work_2_md.webp" alt="AI Faculty Dashboard" loading="lazy" decoding="async" width="1920" height="995">
+                  <img src="images/work_2_md.webp" alt="AI Faculty Dashboard" loading="lazy" decoding="async" width="1000" height="518">
                   <div class="featured-visual-overlay featured-visual-overlay--analytics"></div>
                 </div>
               </div>
@@ -433,7 +434,7 @@
               data-live-link="https://kasidevx.github.io/My-portfolio/">
               <span class="work-num">03</span>
               <div class="work-card-media">
-                <img src="images/work_1_md.webp" alt="Portfolio-v1" loading="lazy" fetchpriority="low" decoding="async" width="1920" height="995">
+                <img src="images/work_1_md.webp" alt="Portfolio-v1" loading="lazy" fetchpriority="low" decoding="async" width="1000" height="518">
               </div>
               <div class="work-info">
                 <div class="work-tags-row">
@@ -470,7 +471,7 @@
               <span class="work-num">04</span>
               <div class="work-card-media">
                 <img src="images/work_3_md.webp" alt="Random Queue Generator" loading="lazy" fetchpriority="low"
-                  decoding="async" width="1920" height="995">
+                  decoding="async" width="1000" height="518">
               </div>
               <div class="work-info">
                 <div class="work-tags-row">
@@ -501,7 +502,7 @@
               data-github-link="https://github.com/KasiDEVX/Github_bot" data-live-link="">
               <span class="work-num">05</span>
               <div class="work-card-media">
-                <img src="images/work_4_full.webp" alt="GitHub Bot" loading="lazy" fetchpriority="low" decoding="async" width="1920" height="1080">
+                <img src="images/work_4_full.webp" alt="GitHub Bot" loading="lazy" fetchpriority="low" decoding="async" width="1000" height="562">
               </div>
               <div class="work-info">
                 <div class="work-tags-row">
@@ -533,7 +534,7 @@
               <span class="work-num">06</span>
               <div class="work-card-media">
                 <img src="images/work_6_placeholder.webp" alt="CI/CD Poisoning Detector" loading="lazy"
-                  fetchpriority="low" decoding="async" width="1920" height="967">
+                  fetchpriority="low" decoding="async" width="1000" height="503">
               </div>
               <div class="work-info">
                 <div class="work-tags-row">
@@ -580,7 +581,7 @@
         <div class="about-portrait-wrap" data-reveal="fade-up">
           <div class="about-portrait-frame">
             <img src="images/about.webp" alt="Portrait of Kasi Vishwanathan" class="about-portrait-img" loading="eager"
-              fetchpriority="high" decoding="async" width="941" height="1672" />
+              fetchpriority="high" decoding="async" width="700" height="1243" />
             <div class="about-portrait-caption">
               <span class="caption-name">KASI VISHWANATHAN P</span>
               <span class="caption-role">DESIGN / DEVELOPMENT</span>
