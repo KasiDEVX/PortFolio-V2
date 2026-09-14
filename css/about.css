@@ -1,0 +1,523 @@
+﻿@keyframes about-orb-float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: none;
+  }
+}
+
+  .hero-content {
+    pointer-events: auto;
+  }
+
+.container {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding-inline: clamp(24px, 5vw, 64px);
+}
+
+section {
+  overflow: clip;
+  position: relative;
+}
+
+section:not(#hero):not(#work):not(.projects-section)::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.6),
+      transparent);
+  pointer-events: none;
+}
+
+.section-label {
+  font-family: var(--sans);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--cta-gold);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.section-label::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: var(--cta-gold);
+}
+
+/* Scroll reveal classes — data-reveal attribute system (GSAP ScrollTrigger) */
+[data-reveal] {
+  /* Managed via hardware-accelerated GSAP transforms during reveal */
+}
+
+/* Legacy .reveal support (fallback) */
+.reveal {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   ABOUT CHAPTER (EDITORIAL LUXURY ARCHITECTURE)
+───────────────────────────────────────────────────────────────── */
+#resume.about-chapter,
+#resume-card.about-chapter {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  padding: clamp(90px, 11vw, 150px) 0 clamp(80px, 10vw, 130px);
+  background: #0d0d0d;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* Ensure about chapter contents are always visible by default before GSAP animation */
+#resume.about-chapter [data-reveal],
+#resume-card.about-chapter [data-reveal] {
+  opacity: 1;
+  transform: none;
+}
+
+.about-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-inline: clamp(24px, 5vw, 64px);
+}
+
+/* 1. Section Intro & Editorial Headline */
+.about-intro {
+  margin-bottom: clamp(48px, 6.5vw, 80px);
+}
+
+.about-intro .section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--sans);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--cta-gold);
+  margin-bottom: 24px;
+}
+
+.about-intro .section-label::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 1px;
+  background: var(--cta-gold);
+}
+
+.about-editorial-headline {
+  font-family: var(--serif);
+  font-size: clamp(2.4rem, 5.2vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1.06;
+  letter-spacing: -0.015em;
+  color: var(--cream);
+  text-transform: uppercase;
+  max-width: 18ch;
+}
+
+.about-editorial-headline .editorial-em {
+  font-style: italic;
+  color: #e8d0a0;
+  font-family: var(--serif);
+}
+
+/* 2. Asymmetric Portrait + Bio Composition */
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(300px, 390px) 1fr;
+  gap: clamp(40px, 6.5vw, 92px);
+  align-items: start;
+  margin-bottom: clamp(64px, 8vw, 110px);
+}
+
+.about-portrait-wrap {
+  width: 100%;
+}
+
+.about-portrait-frame {
+  position: relative;
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.45);
+}
+
+.about-portrait-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  filter: contrast(1.03) brightness(0.97);
+  transition: transform 0.8s var(--ease-smooth);
+}
+
+.about-portrait-frame:hover .about-portrait-img {
+  transform: scale(1.02);
+}
+
+.about-portrait-caption {
+  padding: 14px 18px;
+  background: #131313;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.about-portrait-caption .caption-name {
+  font-weight: 600;
+  color: var(--cream);
+}
+
+.about-portrait-caption .caption-role {
+  color: var(--cta-gold);
+  font-size: 0.68rem;
+}
+
+/* Bio column */
+.about-bio-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.about-lead-text {
+  font-family: var(--sans);
+  font-size: clamp(1.12rem, 1.55vw, 1.32rem);
+  font-weight: 400;
+  line-height: 1.62;
+  color: var(--cream);
+  margin-bottom: 22px;
+  max-width: 60ch;
+}
+
+.about-body-text {
+  font-family: var(--sans);
+  font-size: clamp(0.94rem, 1.05vw, 1.02rem);
+  font-weight: 400;
+  line-height: 1.82;
+  color: rgba(232, 224, 206, 0.7);
+  margin-bottom: 28px;
+  max-width: 60ch;
+}
+
+.about-editorial-tagline {
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 2vw, 1.7rem);
+  font-style: italic;
+  color: var(--cta-gold);
+  margin-bottom: 36px;
+  letter-spacing: 0.01em;
+}
+
+/* Meta grid */
+.about-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.about-meta-item .meta-label {
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(232, 224, 206, 0.4);
+}
+
+.about-meta-item .meta-value {
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.about-meta-item .pulse-indicator {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 10px rgba(74, 222, 128, 0.6);
+  display: inline-block;
+  animation: pulse-dot 2.5s infinite ease-in-out;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+/* 3. Chapter Sub-Blocks (Capabilities, Education, Achievements) */
+.about-chapter-block {
+  margin-top: clamp(64px, 8vw, 104px);
+  padding-top: clamp(38px, 5vw, 60px);
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.chapter-block-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: clamp(28px, 4vw, 48px);
+}
+
+.chapter-num-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.chapter-num {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--cta-gold);
+  letter-spacing: 0.16em;
+}
+
+.chapter-tag {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(232, 224, 206, 0.45);
+}
+
+.chapter-title {
+  font-family: var(--serif);
+  font-size: clamp(1.85rem, 3.2vw, 2.7rem);
+  font-weight: 400;
+  color: var(--cream);
+  letter-spacing: -0.01em;
+}
+
+/* ── CAPABILITIES: Editorial Capability Index ── */
+.capability-index {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.capability-row {
+  display: grid;
+  grid-template-columns: clamp(180px, 20vw, 260px) 1fr;
+  gap: 24px;
+  padding: clamp(18px, 2.2vw, 26px) 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  align-items: baseline;
+  transition: background 0.25s ease, padding-left 0.25s ease;
+}
+
+.capability-row:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.capability-row:hover {
+  background: rgba(255, 255, 255, 0.015);
+  padding-left: 12px;
+}
+
+.capability-row:hover .cap-num {
+  transform: translateX(4px);
+  color: #fff;
+}
+
+.capability-row:hover .cap-name {
+  color: #fff;
+}
+
+.capability-row:hover .capability-tags {
+  color: var(--cream);
+}
+
+.capability-header {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+
+.cap-num {
+  font-family: var(--sans);
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--cta-gold);
+  letter-spacing: 0.12em;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.cap-name {
+  font-family: var(--sans);
+  font-size: 0.94rem;
+  font-weight: 600;
+  color: rgba(232, 224, 206, 0.85);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.25s ease;
+}
+
+.capability-tags {
+  font-family: var(--sans);
+  font-size: clamp(0.92rem, 1.06vw, 1.02rem);
+  line-height: 1.7;
+  color: rgba(232, 224, 206, 0.65);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  align-items: center;
+  transition: color 0.25s ease;
+}
+
+.cap-dot {
+  color: rgba(255, 255, 255, 0.22);
+  font-weight: bold;
+}
+
+/* ── EDUCATION: Editorial Timeline ── */
+.education-editorial-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.edu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: clamp(22px, 2.6vw, 30px) 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  transition: padding-left 0.25s ease, background 0.25s ease;
+}
+
+.edu-item:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.edu-item:hover {
+  padding-left: 12px;
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.edu-item-meta {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 2.4vw, 26px);
+}
+
+.edu-counter {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--cta-gold);
+  letter-spacing: 0.12em;
+}
+
+.edu-crest-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  flex-shrink: 0;
+}
+
+.edu-crest {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(30%);
+  transition: filter 0.3s ease;
+}
+
+.edu-item:hover .edu-crest {
+  filter: grayscale(0%);
+}
+
+.edu-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.edu-institute {
+  font-family: var(--sans);
+  font-size: clamp(1rem, 1.25vw, 1.18rem);
+  font-weight: 600;
+  color: var(--cream);
+  line-height: 1.3;
+}
+
+.edu-degree {
+  font-family: var(--sans);
+  font-size: clamp(0.84rem, 0.96vw, 0.92rem);
+  color: rgba(232, 224, 206, 0.6);
+}
+
+.edu-period {
+  font-family: var(--sans);
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cta-gold);
+  background: rgba(200, 169, 110, 0.08);
+  border: 1px solid rgba(200, 169, 110, 0.2);
+  padding: 6px 14px;
+  border-radius: 100px;
+}
+

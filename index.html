@@ -5,12 +5,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kasi Vishwanathan — Portfolio 2026</title>
-  <meta name="description" content="Kasi Vishwanathan — Web Designer & Developer from Tenkasi">
+  <meta name="description"
+    content="Kasi Vishwanathan — Web Designer & Developer from Tenkasi. Building clean, high-performance digital products.">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kasi-portfolio.netlify.app/">
+  <meta property="og:title" content="Kasi Vishwanathan — Portfolio 2026">
+  <meta property="og:description"
+    content="Web Designer & Developer from Tenkasi. Building clean, high-performance digital products.">
+  <meta property="og:image" content="https://kasi-portfolio.netlify.app/images/og-preview.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kasi Vishwanathan — Portfolio 2026">
+  <meta name="twitter:description"
+    content="Web Designer & Developer from Tenkasi. Building clean, high-performance digital products.">
+  <meta name="twitter:image" content="https://kasi-portfolio.netlify.app/images/og-preview.webp">
+
+  <!-- Canonical -->
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://kasi-portfolio.netlify.app/">
+
+  <!-- Structured Data: Person schema for Google rich results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kasi Vishwanathan",
+    "url": "https://kasi-portfolio.netlify.app/",
+    "jobTitle": "Web Designer & Developer",
+    "description": "Web Designer & Developer from Tenkasi, Tamil Nadu. Building clean, high-performance digital products.",
+    "email": "kasi.offcl@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Tenkasi", "addressRegion": "Tamil Nadu", "addressCountry": "IN" },
+    "sameAs": [
+      "https://github.com/KasiDEVX",
+      "https://www.linkedin.com/in/kasivishwanathanp/",
+      "https://x.com/Kasi_branded",
+      "https://www.instagram.com/devx.kasi/"
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link rel="icon" href="images/icons8-k-100.webp">
-  <!-- Preload critical fonts for LCP / FOUT prevention -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0d0d0d">
+
+  <!-- Preload critical above-fold assets -->
+  <link rel="preload" as="video"
+    href="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260611_130946_e6793cc7-6b6f-4035-9852-44290b781ae6.mp4"
+    type="video/mp4">
+  <link rel="preload" as="image" href="images/cloud_left_cinematic.webp" type="image/webp">
+  <link rel="preload" as="image" href="images/cloud_right_cinematic.webp" type="image/webp">
+
   <link rel="preload"
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@1&family=DM+Sans:wght@400;600&display=swap"
     as="style">
@@ -18,708 +70,1505 @@
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@1&family=DM+Sans:wght@400;600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <!-- Modular CSS — load order matches original style.css top-to-bottom -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/loader.css">
+  <link rel="stylesheet" href="css/nav-hero.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/achievements.css">
+  <link rel="stylesheet" href="css/connect.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/cursor.css">
+  <link rel="stylesheet" href="css/terminal.css">
+  <link rel="stylesheet"
+    href="https://db.onlinewebfonts.com/c/cbb3cb559d2e4387e139cfb1656e31f5?family=Arsenica+Trial+Light">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap">
 </head>
 
+<body id="page-top">
 
-
-<div id="loader" aria-hidden="true">
-  <div class="loader-text">
-    <span class="loader-char" style="animation-delay:0.0s">K</span>
-    <span class="loader-char" style="animation-delay:0.06s">A</span>
-    <span class="loader-char" style="animation-delay:0.12s">S</span>
-    <span class="loader-char" style="animation-delay:0.18s">I</span>
-    <span class="loader-char" style="animation-delay:0.32s; color:var(--gold)">.</span>
-  </div>
-  <div class="loader-bar"></div>
-</div>
-
-<nav id="main-nav">
-  <div class="nav-logo"><a href="#hero">Eren_Kasi</a><span>.</span></div>
-  <ul class="nav-links">
-    <li><a href="#work">Projects</a></li>
-    <li><a href="#resume-card">About</a></li>
-    <li><a href="#certs">Certificates</a></li>
-    <li><a href="#contact" class="nav-cta">Contact</a></li>
-  </ul>
-  <div class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" role="button"
-    tabindex="0">
-    <span></span><span></span><span></span>
-  </div>
-</nav>
-<section id="hero">
-
-
-
-  <div class="corner-dot left"></div>
-  <div class="corner-dot right"></div>
-
-  <!-- Animated Blurred Background Blobs -->
-  <div class="hero-blobs" aria-hidden="true" data-speed="0.85">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-  </div>
-
-  <div class="hero-content">
-    <div class="hero-headline-wrap">
-      <h1 class="hero-headline">PORTFOLIO</h1>
+  <!-- Premium Custom Geometric Arrow Cursor (Fine-pointer Desktop Only) -->
+  <div id="custom-cursor" class="custom-cursor" aria-hidden="true">
+    <div class="cursor-ripple" id="cursor-ripple"></div>
+    <svg class="cursor-pointer-svg" width="22" height="34" viewBox="0 0 22 43" fill="none"
+      xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+      <path d="M0 0 L0 31 L16 42 L21 23 Z" fill="#ffffff" stroke="#1c1c1c" stroke-width="2.2" stroke-linejoin="round"
+        stroke-linecap="round" />
+    </svg>
+    <div class="cursor-badge">
+      <span class="cursor-text"></span>
     </div>
-
-    <div class="name-pill">
-      <span>Kasi Vishwanathan</span>
-    </div>
-
-    <p class="hero-tagline">Web Designer &amp; Developer · Tenkasi, Tamil Nadu</p>
-    <p class="hero-subline">I refine. I remove. I rebuild.</p>
-
-    <div class="hero-cta-row">
-      <a href="#work" class="btn-primary">View Work</a>
-      <a href="#contact" class="btn-ghost">Get In Touch</a>
-    </div>
-
   </div>
 
-  <div class="section-dots section-dots--hero" aria-hidden="true"><span></span><span></span><span></span></div>
+  <!-- Floating Live Time Pill (Choice B - Top-Left Luxury Glass) -->
+  <div class="floating-time-pill" aria-label="Current local time">
+    <span class="time-pulse-dot" aria-hidden="true"></span>
+    <span class="time-label">LOCAL</span>
+    <span id="live-time-val" class="time-val">--:--</span>
+  </div>
 
-</section>
+  <!-- Top-Right Luxury Notification Toast Stack -->
+  <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
 
-
-<section id="work">
-  <div class="container">
-
-    <div class="work-header" data-reveal>
-      <div>
-        <div class="section-label">Selected Projects</div>
-        <h2 class="work-headline">My Projects </h2>
+  <div id="loader">
+    <div class="loader-scene">
+      <div class="loader-noise"></div>
+      <div class="loader-vignette"></div>
+      <div class="loader-particles" aria-hidden="true">
+        <span class="loader-particle"></span>
+        <span class="loader-particle"></span>
+        <span class="loader-particle"></span>
+        <span class="loader-particle"></span>
+        <span class="loader-particle"></span>
+        <span class="loader-particle"></span>
+        <span class="loader-particle"></span>
+        <span class="loader-particle"></span>
       </div>
-      <span style="font-size:0.7rem;letter-spacing:.15em;color:rgba(232,224,206,.3);text-transform:uppercase">04
-        Projects</span>
-    </div>
-
-
-    <div class="work-filters" data-reveal>
-      <div class="filter-tabs">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="web">Web</button>
-        <button class="filter-btn" data-filter="ai">AI</button>
-        <button class="filter-btn" data-filter="python">Python</button>
+      <div class="loader-logo" aria-label="Kasi">
+        <span class="loader-letter">K</span>
+        <span class="loader-letter">A</span>
+        <span class="loader-letter">S</span>
+        <span class="loader-letter">I</span>
+        <span class="loader-letter">.</span>
       </div>
-      <div class="work-search">
-        <i class="fas fa-search"></i>
-        <input type="text" id="project-search" placeholder="Search projects..." aria-label="Search projects">
+      <div class="loader-light"></div>
+      <div class="loader-line-wrap">
+        <div class="loader-line"></div>
       </div>
     </div>
+  </div>
 
-    <div class="work-grid" id="work-grid">
 
-      <div class="work-card" data-reveal data-category="web" data-project-title="Portfolio-v1"
-        data-project-label="Web • Front-End Portfolio"
-        data-project-desc="A modern, responsive personal portfolio website designed to showcase skills, projects, achievements, and contact information. Built with clean UI principles and mobile-first responsiveness."
-        data-project-problem="Needed a professional digital presence to consolidate projects, skills, and contact details into one cohesive, fast-loading hub."
-        data-project-role="Sole Developer & Designer — Responsible for the entire UI/UX design, front-end development, and performance optimization."
-        data-project-result="Launched a buttery-smooth, responsive portfolio with 100/100 Lighthouse performance, securing increased visibility and engagement from recruiters."
-        data-project-tech="HTML5,CSS3,JavaScript,Bootstrap" data-project-image="images/work_1_md.webp"
-        data-github-link="https://github.com/KasiDEVX/My-portfolio"
-        data-live-link="https://kasidevx.github.io/My-portfolio/">
-        <span class="work-num">01</span>
-        <img src="images/work_1_md.webp" alt="Portfolio-v1" loading="lazy" fetchpriority="low" decoding="async">
-        <div class="work-info">
-          <div class="work-tags-row">
-            <span class="work-tag">HTML5</span>
-            <span class="work-tag">CSS3</span>
-            <span class="work-tag">JavaScript</span>
-          </div>
-          <div class="work-title-row">
-            <div class="work-title">Portfolio-v1</div>
-            <div class="work-links">
-              <a href="https://kasidevx.github.io/My-portfolio/" target="_blank" rel="noopener" class="work-live-btn"
-                aria-label="Live Demo" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt"></i>
-                Live</a>
-              <a href="https://github.com/KasiDEVX/My-portfolio" target="_blank" rel="noopener" class="work-github-link"
-                aria-label="View on GitHub" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
-            </div>
-          </div>
-          <div class="work-sub">HTML5 · CSS3 · JavaScript · Bootstrap</div>
+  <div id="page-reveal" aria-hidden="true">
+    <span class="reveal-strip"></span>
+    <span class="reveal-strip"></span>
+    <span class="reveal-strip"></span>
+    <span class="reveal-strip"></span>
+    <span class="reveal-strip"></span>
+  </div>
+
+  <nav id="main-nav" aria-label="Primary navigation">
+    <ul class="nav-links nav-links--left">
+      <li><a href="#work">Projects</a></li>
+      <li><a href="#resume">About</a></li>
+    </ul>
+
+    <a href="#hero" class="nav-logo-center" aria-label="Home">
+      <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false">
+        <path
+          d="M 52 36 C 52 30 57 26 63 26 L 89 26 C 95 26 100 30 100 36 L 100 220 C 100 226 95 230 89 230 L 63 230 C 57 230 52 226 52 220 Z" />
+        <path
+          d="M 120 142 L 180 40 C 183 35 188 32 194 32 L 220 32 C 228 32 232 41 227 47 L 150 152 L 228 221 C 233 226 229 234 222 234 L 194 234 C 188 234 183 231 179 227 L 118 168 Z" />
+      </svg>
+    </a>
+
+    <ul class="nav-links nav-links--right">
+      <li><a href="#certs">Certificates</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Dedicated Accessible Mobile Navigation Drawer -->
+  <div id="mobile-nav-menu" class="mobile-nav-menu" aria-label="Mobile navigation" aria-hidden="true">
+    <ul class="mobile-nav-links">
+      <li><a href="#work" class="mobile-nav-link"><span class="mobile-nav-num">01</span> Projects</a></li>
+      <li><a href="#resume" class="mobile-nav-link"><span class="mobile-nav-num">02</span> About</a></li>
+      <li><a href="#certs" class="mobile-nav-link"><span class="mobile-nav-num">03</span> Certificates</a></li>
+      <li><a href="#contact" class="mobile-nav-link mobile-nav-link--cta"><span class="mobile-nav-num">04</span>
+          Contact</a></li>
+    </ul>
+  </div>
+  <section id="hero" aria-label="Hero">
+
+
+    <video class="hero-video" autoplay muted loop playsinline webkit-playsinline preload="metadata" aria-hidden="true">
+      <source
+        src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260611_130946_e6793cc7-6b6f-4035-9852-44290b781ae6.mp4"
+        type="video/mp4">
+    </video>
+
+
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+
+    <div class="hero-grain" aria-hidden="true"></div>
+
+
+    <div class="hero-content">
+
+      <div class="hero-eyebrow">
+        <p class="hero-label hero-fade-up" style="animation-delay:0.1s">KASI</p>
+        <p class="hero-sublabel hero-fade-up" style="animation-delay:0.1s">VISHWANATHAN</p>
+      </div>
+
+      <div class="hero-headline-wrap hero-fade-up" style="animation-delay:0.25s">
+        <h1 class="hero-headline">
+          <span class="hero-portfolio font-arsenica">PORTFOLIO</span>
+          <span class="hero-year font-inter">2026</span>
+        </h1>
+      </div>
+
+      <p class="hero-tagline hero-fade-up" style="animation-delay:0.4s">
+        A digital portfolio exploring design, development and<br>
+        interactive experiences built with intention.
+      </p>
+
+      <div class="hero-cta-row hero-fade-up" style="animation-delay:0.55s">
+        <a href="#work" class="btn-primary liquid-glass">ENTER PORTFOLIO</a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="projects-section next-section" id="work">
+    <div class="projects-bg next-section-bg" aria-hidden="true"></div>
+    <div class="projects-overlay next-section-overlay" aria-hidden="true"></div>
+    <div class="projects-atmosphere next-section-atmosphere" aria-hidden="true"></div>
+
+    <div class="projects-watermark" aria-hidden="true">
+      <span>SELECTED</span>
+      <span>WORK</span>
+    </div>
+
+    <div class="cloud-transition" aria-hidden="true">
+      <div class="cloud-wrapper cloud-left">
+        <img class="cloud-image" src="images/cloud_left_cinematic.webp" alt="" loading="eager" decoding="async" />
+      </div>
+
+      <div class="cloud-wrapper cloud-right">
+        <div class="cloud-mirror">
+          <img class="cloud-image" src="images/cloud_right_cinematic.webp" alt="" loading="eager" decoding="async" />
         </div>
       </div>
-
-      <div class="work-card" data-reveal data-category="ai" data-project-title="AI Faculty Recommendation Chatbot"
-        data-project-label="AI • Chatbot / Full-Stack"
-        data-project-desc="An AI-powered chatbot that processes natural language queries and interacts with an SQL database to recommend faculty members based on user requirements. Integrates backend logic with conversational AI for intelligent, data-driven suggestions."
-        data-project-problem="Students struggled to navigate complex faculty databases to find appropriate mentors; existing systems lacked natural language understanding."
-        data-project-role="AI Engineer & Backend Dev — Built the NLP pipeline, designed the SQL schema, and integrated the chatbot logic."
-        data-project-result="Reduced search time by 80% through an intuitive conversational interface, correctly mapping user intent to specific database queries."
-        data-project-tech="Python,SQL,NLP,REST APIs" data-project-image="images/work_2_md.webp"
-        data-github-link="https://github.com/KasiDEVX/AI-Faculty-recommendation-Sql-chatbot" data-live-link="">
-        <span class="work-num">02</span>
-        <img src="images/work_2_md.webp" alt="AI Faculty Recommendation Chatbot" loading="lazy" fetchpriority="low"
-          decoding="async">
-        <div class="work-info">
-          <div class="work-tags-row">
-            <span class="work-tag">Python</span>
-            <span class="work-tag">SQL</span>
-            <span class="work-tag">NLP</span>
-          </div>
-          <div class="work-title-row">
-            <div class="work-title">AI Faculty Chatbot</div>
-            <div class="work-links">
-              <a href="https://github.com/KasiDEVX/AI-Faculty-recommendation-Sql-chatbot" target="_blank" rel="noopener"
-                class="work-github-link" aria-label="View on GitHub" onclick="event.stopPropagation()"><i
-                  class="fab fa-github"></i></a>
-            </div>
-          </div>
-          <div class="work-sub">Python · SQL · NLP · REST APIs</div>
-        </div>
-      </div>
-
-      <div class="work-card" data-reveal data-category="python" data-project-title="Random Queue Generator"
-        data-project-label="Utility • Automation Tool"
-        data-project-desc="A lightweight utility tool that generates randomized queue sequences for task ordering or simulation purposes. Designed for efficiency and ease of use in scenarios requiring fair and unbiased random distribution."
-        data-project-problem="Required a fast, programmatic way to simulate fair queue distributions without the overhead of heavy software."
-        data-project-role="Script Author — Wrote the core Python logic, ensuring statistically fair randomization and robust error handling."
-        data-project-result="Created a highly portable utility script that guarantees O(n) performance for instant queue generation across test environments."
-        data-project-tech="Python" data-project-image="images/work_3_md.webp"
-        data-github-link="https://github.com/KasiDEVX/RandomQueueGenerator" data-live-link="">
-        <span class="work-num">03</span>
-        <img src="images/work_3_md.webp" alt="Random Queue Generator" loading="lazy" fetchpriority="low"
-          decoding="async">
-        <div class="work-info">
-          <div class="work-tags-row">
-            <span class="work-tag">Python</span>
-          </div>
-          <div class="work-title-row">
-            <div class="work-title">Random Queue Generator</div>
-            <div class="work-links">
-              <a href="https://github.com/KasiDEVX/RandomQueueGenerator" target="_blank" rel="noopener"
-                class="work-github-link" aria-label="View on GitHub" onclick="event.stopPropagation()"><i
-                  class="fab fa-github"></i></a>
-            </div>
-          </div>
-          <div class="work-sub">Python · Automation</div>
-        </div>
-      </div>
-
-      <div class="work-card" data-reveal data-category="python" data-project-title="GitHub Bot"
-        data-project-label="Automation • Developer Tool"
-        data-project-desc="A GitHub automation bot built to streamline repository management tasks such as automated actions, workflow handling, or repository interaction. Designed to improve developer productivity through automation."
-        data-project-problem="Manual repository maintenance (issues formatting, PR labeling, stale issue closing) was consuming too much developer time."
-        data-project-role="API Integration Dev — Engineered the webhook listener and OAuth logic to safely interact with GitHub's REST endpoints."
-        data-project-result="Automated 100% of routine repo management tasks, drastically reducing human error and improving project velocity."
-        data-project-tech="Python,GitHub API" data-project-image="images/work_4_full.webp"
-        data-github-link="https://github.com/KasiDEVX/Github_bot" data-live-link="">
-        <span class="work-num">04</span>
-        <img src="images/work_4_full.webp" alt="GitHub Bot" loading="lazy" fetchpriority="low" decoding="async">
-        <div class="work-info">
-          <div class="work-tags-row">
-            <span class="work-tag">Python</span>
-            <span class="work-tag">GitHub API</span>
-          </div>
-          <div class="work-title-row">
-            <div class="work-title">GitHub Bot</div>
-            <div class="work-links">
-              <a href="https://github.com/KasiDEVX/Github_bot" target="_blank" rel="noopener" class="work-github-link"
-                aria-label="View on GitHub" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
-            </div>
-          </div>
-          <div class="work-sub">Python · GitHub API · Automation</div>
-        </div>
-      </div>
-
     </div>
-  </div>
-</section>
 
-<div id="resume-card">
-  <div class="container resume-container">
-    <div class="resume-grid">
+    <div class="projects-content next-section-content">
+      <div class="container">
 
-
-      <div class="resume-left-col">
-        <div class="portrait-col">
-          <img src="images/about_me_pic2.webp" alt="Kasi Vishwanathan portrait" loading="lazy" fetchpriority="low"
-            decoding="async">
-          <div class="portrait-overlay">
-            <div class="portrait-name">Kasi Vishwanathan</div>
-            <div class="portrait-tags">
-              <span class="portrait-tag">Web Design</span>
-              <span class="portrait-tag">Front-End</span>
-              <span class="portrait-tag">Social Media</span>
-            </div>
+        <div class="work-header" data-reveal>
+          <div class="work-header-left">
+            <span class="section-label">Selected Work</span>
+            <h2 class="work-headline">Featured Case Studies</h2>
+          </div>
+          <div class="work-header-right">
+            <span class="projects-counter-badge">06 Projects / 02 Flagships</span>
           </div>
         </div>
 
-        <div class="about-col">
-          <div class="about-section-title">About Me</div>
-          <div class="about-hello">Hello,</div>
-          <p class="about-body-text">
-            I'm Kasi Vishwanathan, a passionate web designer from Tenkasi with a love for minimalism and bold visuals.
-            I bring ideas to life using HTML, CSS &amp; JavaScript, and a sprinkle of creativity.
-            Whether it's building clean portfolios, interactive UI, or responsive layouts, I'm always up for a
-            creative challenge.
+        <!-- FEATURED SHOWCASE (01 The Atelier & 02 AI Faculty Dashboard) -->
+        <div class="featured-projects" data-reveal>
+
+          <!-- 01 Flagship: THE ATELIER -->
+          <article class="featured-card work-card" data-category="web ai" data-project-title="The Atelier"
+            data-project-label="EDTECH / FULL-STACK / AI • 2026"
+            data-project-desc="An RPG-style learning platform where developers learn through quests, build real projects, prove their work through validation, earn XP, level up, and progress through skill ranks with AI mentorship."
+            data-project-problem="Traditional online learning is often passive, has weak accountability, creates a poor connection between learning and practical work, and makes it easy to copy solutions."
+            data-project-role="Full-Stack Developer &amp; System Architect — Engineered the quest-based progression engine, modular Validation Profile system, and AI mentorship pipeline."
+            data-project-result="Created an interactive progression ecosystem featuring practical code validation, a 5-layer anti-copy mechanism, weekly leaderboards, and verified XP reward progression."
+            data-project-tech="React,TypeScript,Tailwind CSS,Node.js,Express.js,PostgreSQL,OpenAI API,Vercel"
+            data-project-image="images/work_5_placeholder.webp" data-github-link=""
+            data-live-link="https://atelierforge.vercel.app/">
+
+            <div class="featured-card-inner">
+              <div class="featured-card-content">
+                <div class="featured-card-meta">
+                  <span class="featured-num">01</span>
+                  <span class="featured-badge">Featured Flagship</span>
+                  <span class="featured-cat">EDTECH / FULL-STACK / AI • 2026</span>
+                </div>
+
+                <h3 class="featured-title">THE ATELIER</h3>
+                <div class="featured-subtitle">RPG LEARNING PLATFORM &amp; PROGRESSION ENGINE</div>
+
+                <p class="featured-desc">
+                  An RPG-style learning platform where developers learn through quests, build real projects, prove their
+                  work through validation, earn XP, level up, and progress through skill ranks with AI mentorship.
+                </p>
+
+                <div class="featured-flow-pill">
+                  <span class="flow-lead">Philosophy</span>
+                  <span class="flow-steps">Learn <i>→</i> Build <i>→</i> Prove <i>→</i> Earn <i>→</i> Progress</span>
+                </div>
+
+                <div class="featured-features-grid">
+                  <div class="feature-chip"><i class="fas fa-cubes"></i> Modular Validation Profiles</div>
+                  <div class="feature-chip"><i class="fas fa-shield-alt"></i> 5-Layer Anti-Copy Architecture</div>
+                  <div class="feature-chip"><i class="fas fa-robot"></i> Interactive AI Mentorship</div>
+                  <div class="feature-chip"><i class="fas fa-trophy"></i> XP, Levels &amp; Skill Ranks</div>
+                </div>
+
+                <div class="featured-stack">
+                  <span>React</span>
+                  <span>TypeScript</span>
+                  <span>Tailwind CSS</span>
+                  <span>Node.js</span>
+                  <span>Express</span>
+                  <span>PostgreSQL</span>
+                  <span>OpenAI API</span>
+                  <span>Vercel</span>
+                </div>
+
+                <div class="featured-action-row">
+                  <span class="btn-featured-view">
+                    View Project Case Study <i class="fas fa-arrow-right"></i>
+                  </span>
+                  <a href="https://atelierforge.vercel.app/" target="_blank" rel="noopener" class="featured-live-link"
+                    aria-label="Live Demo" onclick="event.stopPropagation()">
+                    <i class="fas fa-external-link-alt"></i> <span>Live Demo</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="featured-visual-pane">
+                <div class="featured-image-frame">
+                  <img src="images/work_5_placeholder.webp" alt="The Atelier" loading="lazy" decoding="async">
+                  <div class="featured-visual-overlay"></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 02 Flagship: AI FACULTY DASHBOARD -->
+          <article class="featured-card featured-card--reverse work-card" data-category="ai full-stack dashboard"
+            data-project-title="AI Faculty Dashboard" data-project-label="AI / FULL-STACK / DASHBOARD • 2026"
+            data-project-desc="An AI-powered academic intelligence dashboard and SQL assistant designed to track student performance, attendance, and CGPA risk analysis while providing natural-language faculty mentorship recommendations backed by MySQL."
+            data-project-problem="Faculty mentors and administrators lacked real-time visibility into student academic risk distribution and had to manually navigate complex institutional databases without natural-language query support."
+            data-project-role="AI &amp; Full-Stack Developer — Built the academic risk scoring model, MySQL database schema, real-time analytics UI, and conversational SQL query chatbot."
+            data-project-result="Delivered a unified intelligence dashboard with live risk distribution charts, attendance and backlog tracking, and an integrated AI assistant that converts natural language into verified SQL queries."
+            data-project-tech="Python,Flask,MySQL,SQL,NLP,Chart.js,REST APIs" data-project-image="images/work_2_md.webp"
+            data-github-link="https://github.com/KasiDEVX/AI-Faculty-recommendation-Sql-chatbot" data-live-link="">
+
+            <div class="featured-card-inner">
+              <div class="featured-card-content">
+                <div class="featured-card-meta">
+                  <span class="featured-num">02</span>
+                  <span class="featured-badge featured-badge--analytics">Featured Flagship</span>
+                  <span class="featured-cat">AI / FULL-STACK / DASHBOARD • 2026</span>
+                </div>
+
+                <h3 class="featured-title">AI FACULTY DASHBOARD</h3>
+                <div class="featured-subtitle">ACADEMIC RISK INTELLIGENCE &amp; SQL ASSISTANT</div>
+
+                <p class="featured-desc">
+                  An AI-powered academic intelligence dashboard and SQL assistant that tracks student performance,
+                  attendance, and CGPA risk analysis while providing natural-language faculty mentorship recommendations
+                  backed by MySQL.
+                </p>
+
+                <div class="featured-flow-pill">
+                  <span class="flow-lead">Architecture</span>
+                  <span class="flow-steps">Telemetry <i>→</i> Risk Engine <i>→</i> MySQL <i>→</i> AI SQL Assistant
+                    <i>→</i> Insights</span>
+                </div>
+
+                <div class="featured-features-grid">
+                  <div class="feature-chip"><i class="fas fa-chart-pie"></i> Academic Risk Intelligence</div>
+                  <div class="feature-chip"><i class="fas fa-user-graduate"></i> Attendance &amp; CGPA Analytics</div>
+                  <div class="feature-chip"><i class="fas fa-database"></i> MySQL-Backed Data Warehouse</div>
+                  <div class="feature-chip"><i class="fas fa-comments"></i> Conversational SQL Chatbot</div>
+                </div>
+
+                <div class="featured-stack">
+                  <span>Python</span>
+                  <span>Flask</span>
+                  <span>MySQL</span>
+                  <span>SQL</span>
+                  <span>NLP</span>
+                  <span>Chart.js</span>
+                  <span>REST APIs</span>
+                </div>
+
+                <div class="featured-action-row">
+                  <span class="btn-featured-view">
+                    View Project Case Study <i class="fas fa-arrow-right"></i>
+                  </span>
+                  <a href="https://github.com/KasiDEVX/AI-Faculty-recommendation-Sql-chatbot" target="_blank"
+                    rel="noopener" class="featured-github-link" aria-label="View on GitHub"
+                    onclick="event.stopPropagation()">
+                    <i class="fab fa-github"></i> <span>GitHub</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="featured-visual-pane">
+                <div class="featured-image-frame">
+                  <img src="images/work_2_md.webp" alt="AI Faculty Dashboard" loading="lazy" decoding="async">
+                  <div class="featured-visual-overlay featured-visual-overlay--analytics"></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- SECONDARY PROJECTS (03, 04, 05, 06) -->
+        <div class="other-projects-section" data-reveal>
+          <div class="other-projects-header">
+            <div>
+              <span class="section-label">Archive &amp; Systems</span>
+              <h3 class="other-projects-title">Other Selected Works</h3>
+            </div>
+            <span class="other-projects-count">04 Works</span>
+          </div>
+
+          <div class="work-grid" id="work-grid">
+
+            <!-- 03 Portfolio-v1 -->
+            <article class="work-card" data-reveal data-category="web" data-project-title="Portfolio-v1"
+              data-project-label="Web • Front-End Portfolio"
+              data-project-desc="A modern, responsive personal portfolio website designed to showcase skills, projects, achievements, and contact information. Built with clean UI principles and mobile-first responsiveness."
+              data-project-problem="Needed a professional digital presence to consolidate projects, skills, and contact details into one cohesive, fast-loading hub."
+              data-project-role="Sole Developer &amp; Designer — Responsible for the entire UI/UX design, front-end development, and performance optimization."
+              data-project-result="Launched a responsive portfolio with 100/100 Lighthouse performance, securing increased visibility and engagement from recruiters."
+              data-project-tech="HTML5,CSS3,JavaScript,Bootstrap" data-project-image="images/work_1_md.webp"
+              data-github-link="https://github.com/KasiDEVX/My-portfolio"
+              data-live-link="https://kasidevx.github.io/My-portfolio/">
+              <span class="work-num">03</span>
+              <div class="work-card-media">
+                <img src="images/work_1_md.webp" alt="Portfolio-v1" loading="lazy" fetchpriority="low" decoding="async">
+              </div>
+              <div class="work-info">
+                <div class="work-tags-row">
+                  <span class="work-tag">HTML5</span>
+                  <span class="work-tag">CSS3</span>
+                  <span class="work-tag">JavaScript</span>
+                  <span class="work-tag">Bootstrap</span>
+                </div>
+                <div class="work-title-row">
+                  <div class="work-title">Portfolio-v1</div>
+                  <div class="work-links">
+                    <a href="https://kasidevx.github.io/My-portfolio/" target="_blank" rel="noopener"
+                      class="work-live-btn" aria-label="Live Demo" onclick="event.stopPropagation()"><i
+                        class="fas fa-external-link-alt"></i>
+                      Live</a>
+                    <a href="https://github.com/KasiDEVX/My-portfolio" target="_blank" rel="noopener"
+                      class="work-github-link" aria-label="View on GitHub" onclick="event.stopPropagation()"><i
+                        class="fab fa-github"></i></a>
+                  </div>
+                </div>
+                <div class="work-sub">Web • Front-End Portfolio</div>
+              </div>
+            </article>
+
+            <!-- 04 Random Queue Generator -->
+            <article class="work-card" data-reveal data-category="python" data-project-title="Random Queue Generator"
+              data-project-label="Utility • Automation Tool"
+              data-project-desc="A lightweight utility tool that generates randomized queue sequences for task ordering or simulation purposes. Designed for efficiency and ease of use in scenarios requiring fair and unbiased random distribution."
+              data-project-problem="Required a fast, programmatic way to simulate fair queue distributions without the overhead of heavy software."
+              data-project-role="Script Author — Wrote the core Python logic, ensuring statistically fair randomization and robust error handling."
+              data-project-result="Created a highly portable utility script that guarantees O(n) performance for instant queue generation across test environments."
+              data-project-tech="Python" data-project-image="images/work_3_md.webp"
+              data-github-link="https://github.com/KasiDEVX/RandomQueueGenerator" data-live-link="">
+              <span class="work-num">04</span>
+              <div class="work-card-media">
+                <img src="images/work_3_md.webp" alt="Random Queue Generator" loading="lazy" fetchpriority="low"
+                  decoding="async">
+              </div>
+              <div class="work-info">
+                <div class="work-tags-row">
+                  <span class="work-tag">Python</span>
+                  <span class="work-tag">Automation</span>
+                  <span class="work-tag">Algorithms</span>
+                </div>
+                <div class="work-title-row">
+                  <div class="work-title">Random Queue Generator</div>
+                  <div class="work-links">
+                    <a href="https://github.com/KasiDEVX/RandomQueueGenerator" target="_blank" rel="noopener"
+                      class="work-github-link" aria-label="View on GitHub" onclick="event.stopPropagation()"><i
+                        class="fab fa-github"></i></a>
+                  </div>
+                </div>
+                <div class="work-sub">Utility • Automation Tool</div>
+              </div>
+            </article>
+
+            <!-- 05 GitHub Bot -->
+            <article class="work-card" data-reveal data-category="python" data-project-title="GitHub Bot"
+              data-project-label="Automation • Developer Tool"
+              data-project-desc="A GitHub automation bot built to streamline repository management tasks such as automated actions, workflow handling, or repository interaction. Designed to improve developer productivity through automation."
+              data-project-problem="Manual repository maintenance (issues formatting, PR labeling, stale issue closing) was consuming too much developer time."
+              data-project-role="API Integration Dev — Engineered the webhook listener and OAuth logic to safely interact with GitHub's REST endpoints."
+              data-project-result="Automated routine repo management tasks, drastically reducing human error and improving project velocity."
+              data-project-tech="Python,GitHub API" data-project-image="images/work_4_full.webp"
+              data-github-link="https://github.com/KasiDEVX/Github_bot" data-live-link="">
+              <span class="work-num">05</span>
+              <div class="work-card-media">
+                <img src="images/work_4_full.webp" alt="GitHub Bot" loading="lazy" fetchpriority="low" decoding="async">
+              </div>
+              <div class="work-info">
+                <div class="work-tags-row">
+                  <span class="work-tag">Python</span>
+                  <span class="work-tag">GitHub API</span>
+                  <span class="work-tag">Webhooks</span>
+                </div>
+                <div class="work-title-row">
+                  <div class="work-title">GitHub Bot</div>
+                  <div class="work-links">
+                    <a href="https://github.com/KasiDEVX/Github_bot" target="_blank" rel="noopener"
+                      class="work-github-link" aria-label="View on GitHub" onclick="event.stopPropagation()"><i
+                        class="fab fa-github"></i></a>
+                  </div>
+                </div>
+                <div class="work-sub">Automation • Developer Tool</div>
+              </div>
+            </article>
+
+            <!-- 06 CI/CD Poisoning Detector -->
+            <article class="work-card" data-reveal data-category="security python web"
+              data-project-title="CI/CD Poisoning Detector" data-project-label="CYBERSECURITY / DEVSECOPS • 2026"
+              data-project-desc="A real-time CI/CD security control center that detects pipeline poisoning and supply-chain risks across GitHub workflows, validates incoming webhooks, analyzes repository snapshots, scores risk, and reports findings through GitHub Checks and a security dashboard."
+              data-project-problem="CI/CD pipelines are a major software supply-chain attack surface. Malicious workflow changes, excessive permissions, secret exposure, and dependency or URL typosquatting can compromise build and deployment systems."
+              data-project-role="Security Engineer &amp; Pipeline Architect — Designed the webhook ingestion pipeline with Tailscale Funnel, static analyzers, risk scoring engine, and GitHub Check Runs integration."
+              data-project-result="Delivered automated end-to-end pipeline risk detection with HMAC-SHA256 signature verification, verified safe vs. malicious test scenarios, and real-time telemetry dashboard reporting."
+              data-project-tech="Python,GitHub Actions,Tailscale Funnel,HMAC-SHA256,Docker"
+              data-project-image="images/work_6_placeholder.webp" data-github-link="" data-live-link="">
+              <span class="work-num">06</span>
+              <div class="work-card-media">
+                <img src="images/work_6_placeholder.webp" alt="CI/CD Poisoning Detector" loading="lazy"
+                  fetchpriority="low" decoding="async">
+              </div>
+              <div class="work-info">
+                <div class="work-tags-row">
+                  <span class="work-tag">Python</span>
+                  <span class="work-tag">DevSecOps</span>
+                  <span class="work-tag">GitHub Actions</span>
+                  <span class="work-tag">Docker</span>
+                </div>
+                <div class="work-title-row">
+                  <div class="work-title">CI/CD Poisoning Detector</div>
+                  <div class="work-links">
+                    <span class="work-case-btn"><i class="fas fa-arrow-right"></i> Case Study</span>
+                  </div>
+                </div>
+                <div class="work-sub">Cybersecurity • Pipeline Security</div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="next-section-bottom" aria-hidden="true"></div>
+  </section>
+
+  <section id="resume" class="about-chapter" aria-label="About Me">
+    <div class="container about-container">
+
+
+      <div class="about-intro" data-reveal="fade-up">
+        <span class="section-label">About Me</span>
+        <h2 class="about-editorial-headline">
+          I BUILD DIGITAL<br>
+          <span class="editorial-em">EXPERIENCES</span> THAT<br>
+          FEEL ALIVE.
+        </h2>
+      </div>
+
+
+      <div class="about-hero-grid">
+
+
+        <div class="about-portrait-wrap" data-reveal="fade-up">
+          <div class="about-portrait-frame">
+            <img src="images/about.webp" alt="Portrait of Kasi Vishwanathan" class="about-portrait-img" loading="eager"
+              fetchpriority="high" decoding="async" />
+            <div class="about-portrait-caption">
+              <span class="caption-name">KASI VISHWANATHAN P</span>
+              <span class="caption-role">DESIGN / DEVELOPMENT</span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="about-bio-column" data-reveal="fade-up">
+          <p class="about-lead-text">
+            Computer Science &amp; Business Systems student at Ramco Institute of Technology with an intentional focus
+            on digital minimalism, clean typography, and interactive web architecture.
           </p>
-          <p class="about-body-text" style="opacity:.78;margin-top:10px;">I refine. I remove. I rebuild.</p>
-          <br>
-          <p class="about-body-text" style="opacity:.7">Let's collaborate to build something awesome together.</p>
+          <p class="about-body-text">
+            Based in Tenkasi, Tamil Nadu, I build purposeful interfaces where engineering rigor meets aesthetic craft. I
+            refine, remove, and rebuild until every digital experience feels tactile, lightweight, and alive.
+          </p>
+          <div class="about-editorial-tagline">
+            &ldquo;I refine. I remove. I rebuild.&rdquo;
+          </div>
+
+          <div class="about-meta-grid">
+            <div class="about-meta-item">
+              <span class="meta-label">DISCIPLINE</span>
+              <span class="meta-value">Creative Engineering &amp; Full Stack</span>
+            </div>
+            <div class="about-meta-item">
+              <span class="meta-label">LOCATION</span>
+              <span class="meta-value">Tenkasi, Tamil Nadu, India</span>
+            </div>
+            <div class="about-meta-item">
+              <span class="meta-label">STATUS</span>
+              <span class="meta-value status-available">
+                <span class="pulse-indicator"></span> Available for Projects
+              </span>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="section-dots section-dots--resume" aria-hidden="true"><span></span><span></span><span></span></div>
-
-
-      <div class="edu-exp-col">
-
-
-        <div class="col-section-title">Education</div>
-
-        <div style="margin-bottom:4px;">
-          <div class="year-chip">1st – 12th Std</div>
-        </div>
-        <img src="images/school-logo.png" alt="Spectrum School"
-          style="width:36px;height:36px;object-fit:contain;filter:grayscale(60%) contrast(1.2);margin-bottom:6px;"
-          loading="lazy">
-        <div class="entry-org">Spectrum Matric Higher Sec School</div>
-        <div class="entry-role">Foundational Education · Science &amp; Mathematics</div>
-
-        <div class="entry-divider"></div>
-
-        <div style="margin-bottom:4px;">
-          <div class="year-chip">Currently 2nd Year</div>
-        </div>
-        <img src="images/college-logo.webp" alt="Ramco Institute"
-          style="width:36px;height:36px;object-fit:contain;filter:grayscale(60%) contrast(1.2);margin-bottom:6px;"
-          loading="lazy">
-        <div class="entry-org">Ramco Institute of Technology</div>
-        <div class="entry-role">Computer Science &amp; Business Systems<br>Specializing in web development &amp;
-          business applications</div>
-
-        <div class="entry-divider"></div>
-
-
-        <div class="col-section-title" style="margin-top:6px;">Achievements</div>
-
-        <div style="margin-bottom:4px;">
-          <div class="year-chip">FreeCodeCamp</div>
-        </div>
-        <div class="entry-org">Responsive Web Design</div>
-        <div class="entry-role">HTML &amp; CSS Certificate</div>
-
-        <div class="entry-divider"></div>
-
-        <div style="margin-bottom:4px;">
-          <div class="year-chip">CodeChef</div>
-        </div>
-        <div class="entry-org">Coding Badge — 500+ Problems</div>
-        <div class="entry-role">Competitive Programming · 100-Day Streak</div>
-
-        <div class="entry-divider"></div>
-
-        <div style="margin-bottom:4px;">
-          <div class="year-chip">AWS / TATA</div>
-        </div>
-        <div class="entry-org">Virtual Experience Programs</div>
-        <div class="entry-role">AWS Solutions Architecture · TATA Cybersecurity Analyst</div>
-
-        <div class="entry-divider"></div>
-
-        <div style="margin-bottom:4px;">
-          <div class="year-chip">LinkedIn</div>
-        </div>
-        <div class="entry-org">Prompt Engineering Certificate</div>
-        <div class="entry-role">AI Prompt Mastery · Generative AI</div>
 
       </div>
 
 
-      <div class="skills-col">
+      <div class="about-chapter-block capabilities-block" data-reveal="fade-up">
+        <div class="chapter-block-header">
+          <div class="chapter-num-wrap">
+            <span class="chapter-num">01</span>
+            <span class="chapter-tag">DISCIPLINES &amp; STACK</span>
+          </div>
+          <h3 class="chapter-title">Capabilities</h3>
+        </div>
 
-        <div class="skills-col-title">Design &amp; Dev Tools</div>
+        <div class="capability-index">
 
-
-        <div class="software-grid">
-
-          <div class="software-item">
-            <div class="app-badge figma"><i class="fab fa-figma" aria-hidden="true"></i></div>
-            <div class="app-info">
-              <div class="app-name">Figma</div>
-              <div class="dot-rating">
-                <div class="dot filled"></div>
-                <div class="dot filled"></div>
-                <div class="dot filled"></div>
-                <div class="dot empty"></div>
-                <div class="dot empty"></div>
-                <div class="dot-rating-line"></div>
-              </div>
+          <div class="capability-row">
+            <div class="capability-header">
+              <span class="cap-num">01</span>
+              <span class="cap-name">FRONTEND</span>
+            </div>
+            <div class="capability-tags">
+              <span>HTML5</span>
+              <span class="cap-dot">&middot;</span>
+              <span>CSS3</span>
+              <span class="cap-dot">&middot;</span>
+              <span>JavaScript (ES6+)</span>
+              <span class="cap-dot">&middot;</span>
+              <span>React</span>
+              <span class="cap-dot">&middot;</span>
+              <span>TypeScript</span>
+              <span class="cap-dot">&middot;</span>
+              <span>Tailwind CSS</span>
+              <span class="cap-dot">&middot;</span>
+              <span>Bootstrap</span>
             </div>
           </div>
 
-          <div class="software-item">
-            <div class="app-badge html"><i class="fas fa-code" aria-hidden="true"></i></div>
-            <div class="app-info">
-              <div class="app-name">HTML / CSS</div>
-              <div class="dot-rating">
-                <div class="dot filled"></div>
-                <div class="dot filled"></div>
-                <div class="dot filled"></div>
-                <div class="dot filled"></div>
-                <div class="dot empty"></div>
-                <div class="dot-rating-line"></div>
-              </div>
+          <div class="capability-row">
+            <div class="capability-header">
+              <span class="cap-num">02</span>
+              <span class="cap-name">BACKEND</span>
+            </div>
+            <div class="capability-tags">
+              <span>Python</span>
+              <span class="cap-dot">&middot;</span>
+              <span>Django</span>
+              <span class="cap-dot">&middot;</span>
+              <span>Node.js</span>
+              <span class="cap-dot">&middot;</span>
+              <span>RESTful APIs</span>
             </div>
           </div>
 
-          <div class="software-item">
-            <div class="app-badge js"><i class="fab fa-js" aria-hidden="true"></i></div>
-            <div class="app-info">
-              <div class="app-name">JavaScript</div>
-              <div class="dot-rating">
-                <div class="dot filled"></div>
-                <div class="dot filled"></div>
-                <div class="dot filled"></div>
-                <div class="dot empty"></div>
-                <div class="dot empty"></div>
-                <div class="dot-rating-line"></div>
-              </div>
+          <div class="capability-row">
+            <div class="capability-header">
+              <span class="cap-num">03</span>
+              <span class="cap-name">DATABASE</span>
+            </div>
+            <div class="capability-tags">
+              <span>MySQL</span>
+              <span class="cap-dot">&middot;</span>
+              <span>PostgreSQL</span>
             </div>
           </div>
 
-          <div class="software-item">
-            <div class="app-badge python"><i class="fab fa-python" aria-hidden="true"></i></div>
-            <div class="app-info">
-              <div class="app-name">Python</div>
-              <div class="dot-rating">
-                <div class="dot filled"></div>
-                <div class="dot filled"></div>
-                <div class="dot filled"></div>
-                <div class="dot empty"></div>
-                <div class="dot empty"></div>
-                <div class="dot-rating-line"></div>
-              </div>
+          <div class="capability-row">
+            <div class="capability-header">
+              <span class="cap-num">04</span>
+              <span class="cap-name">DESIGN</span>
+            </div>
+            <div class="capability-tags">
+              <span>Figma</span>
+              <span class="cap-dot">&middot;</span>
+              <span>UI / UX Design</span>
+              <span class="cap-dot">&middot;</span>
+              <span>Visual Systems</span>
+              <span class="cap-dot">&middot;</span>
+              <span>Design Architecture</span>
             </div>
           </div>
 
-          <div class="software-item">
-            <div class="app-badge mysql"><i class="fas fa-database" aria-hidden="true"></i></div>
-            <div class="app-info">
-              <div class="app-name">MySQL</div>
-              <div class="dot-rating">
-                <div class="dot filled"></div>
-                <div class="dot filled"></div>
-                <div class="dot filled"></div>
-                <div class="dot empty"></div>
-                <div class="dot empty"></div>
-                <div class="dot-rating-line"></div>
-              </div>
+          <div class="capability-row">
+            <div class="capability-header">
+              <span class="cap-num">05</span>
+              <span class="cap-name">MOTION</span>
+            </div>
+            <div class="capability-tags">
+              <span>GSAP</span>
+              <span class="cap-dot">&middot;</span>
+              <span>ScrollTrigger</span>
+              <span class="cap-dot">&middot;</span>
+              <span>Micro-Interactions</span>
             </div>
           </div>
 
-          <div class="software-item">
-            <div class="app-badge django"><i class="fas fa-leaf" aria-hidden="true"></i></div>
-            <div class="app-info">
-              <div class="app-name">Django</div>
-              <div class="dot-rating">
-                <div class="dot filled"></div>
-                <div class="dot filled"></div>
-                <div class="dot empty"></div>
-                <div class="dot empty"></div>
-                <div class="dot empty"></div>
-                <div class="dot-rating-line"></div>
-              </div>
+          <div class="capability-row">
+            <div class="capability-header">
+              <span class="cap-num">06</span>
+              <span class="cap-name">TOOLS</span>
+            </div>
+            <div class="capability-tags">
+              <span>Git</span>
+              <span class="cap-dot">&middot;</span>
+              <span>GitHub</span>
+              <span class="cap-dot">&middot;</span>
+              <span>Vercel</span>
+              <span class="cap-dot">&middot;</span>
+              <span>VS Code</span>
             </div>
           </div>
 
         </div>
-
-        <div class="personal-skills-title">Personal Skills</div>
-
-        <div class="personal-tags">
-          <span class="personal-tag">Creativity</span>
-          <span class="personal-tag">Typography</span>
-          <span class="personal-tag">Diligent</span>
-          <span class="personal-tag">Problem Solving</span>
-          <span class="personal-tag">Layout</span>
-          <span class="personal-tag">Team Work</span>
-          <span class="personal-tag">Adaptive</span>
-          <span class="personal-tag">Time Management</span>
-          <span class="personal-tag">Communication</span>
-        </div>
+      </div>
 
 
-        <div style="margin-top:28px; padding-top:20px; border-top:1px solid rgba(26,26,24,0.12);">
-          <div class="col-section-title" style="font-size:1.2rem; margin-bottom:14px;">Contact</div>
-          <div style="display:flex;flex-direction:column;gap:8px;">
-            <a href="mailto:kasi.offcl@gmail.com"
-              style="font-size:.76rem;color:rgba(26,26,24,.65);display:flex;align-items:center;gap:8px;">
-              <i class="fas fa-envelope contact-mini-icon"></i>kasi.offcl@gmail.com
-            </a>
-            <a href="https://github.com/KasiDEVX" target="_blank"
-              style="font-size:.76rem;color:rgba(26,26,24,.65);display:flex;align-items:center;gap:8px;">
-              <i class="fab fa-github contact-mini-icon"></i>github.com/KasiDEVX
-            </a>
-            <a href="https://www.linkedin.com/in/kasivishwanathanp/" target="_blank"
-              style="font-size:.76rem;color:rgba(26,26,24,.65);display:flex;align-items:center;gap:8px;">
-              <i class="fab fa-linkedin contact-mini-icon"></i>linkedin.com/in/kasivishwanathanp
-            </a>
-            <a href="https://www.instagram.com/devx.kasi/" target="_blank"
-              style="font-size:.76rem;color:rgba(26,26,24,.65);display:flex;align-items:center;gap:8px;">
-              <i class="fab fa-instagram contact-mini-icon"></i>@eren_kasi
-            </a>
+      <div class="about-chapter-block education-block" data-reveal="fade-up">
+        <div class="chapter-block-header">
+          <div class="chapter-num-wrap">
+            <span class="chapter-num">02</span>
+            <span class="chapter-tag">ACADEMIC PATH</span>
           </div>
+          <h3 class="chapter-title">Education</h3>
         </div>
 
+        <div class="education-editorial-list">
 
-        <div
-          style="position:absolute; right:20px; bottom:60px; display:flex; flex-direction:column; gap:6px; opacity:.35;">
-          <div style="width:7px;height:7px;border-radius:50%;border:1.5px solid var(--ink);"></div>
-          <div style="width:7px;height:7px;border-radius:50%;border:1.5px solid var(--ink);"></div>
-          <div style="width:7px;height:7px;border-radius:50%;background:var(--ink);"></div>
-        </div>
+          <div class="edu-item">
+            <div class="edu-item-meta">
+              <span class="edu-counter">01</span>
+              <div class="edu-crest-wrap">
+                <img src="images/college-logo.webp" alt="Ramco Institute of Technology" class="edu-crest"
+                  loading="lazy" />
+              </div>
+              <div class="edu-info">
+                <h4 class="edu-institute">Ramco Institute of Technology</h4>
+                <p class="edu-degree">B.Tech in Computer Science and Business Systems (CSBS)</p>
+              </div>
+            </div>
+            <div class="edu-period">3rd Year &middot; Current</div>
+          </div>
 
-      </div>
+          <div class="edu-item">
+            <div class="edu-item-meta">
+              <span class="edu-counter">02</span>
+              <div class="edu-crest-wrap">
+                <img src="images/school-logo.webp" alt="Spectrum Matric HSS" class="edu-crest" loading="lazy" />
+              </div>
+              <div class="edu-info">
+                <h4 class="edu-institute">Spectrum Matric Higher Secondary School</h4>
+                <p class="edu-degree">Higher Secondary Education &middot; Science &amp; Mathematics</p>
+              </div>
+            </div>
+            <div class="edu-period">1st &ndash; 12th Grade</div>
+          </div>
 
-    </div>
-  </div>
-</div>
-<section id="certs">
-  <div class="section-dots section-dots--certs" aria-hidden="true"><span></span><span></span><span></span></div>
-  <div class="container">
-    <div class="section-label" data-reveal="left">Recognition</div>
-    <h2 class="certs-title" data-reveal="left">My Certificates</h2>
-
-    <div class="certs-grid">
-
-      <div class="cert-card cert-card--featured " data-reveal="scale" data-lightbox="images/cert1.webp">
-        <div class="cert-img-wrap">
-          <img src="images/cert1.webp" alt="Bootstrap Certificate" loading="lazy" decoding="async">
-          <div class="cert-zoom-icon"><i class="fas fa-expand-alt"></i></div>
-        </div>
-        <div class="cert-body">
-          <div class="cert-name">Bootstrap Certificate</div>
-          <div class="cert-desc">Completed Bootstrap course on FreeCodeCamp platform.</div>
-        </div>
-      </div>
-
-      <div class="cert-card " data-reveal="scale" data-lightbox="images/cert2.webp">
-        <div class="cert-img-wrap">
-          <img src="images/cert2.webp" alt="HTML & CSS Certificate" loading="lazy" decoding="async">
-          <div class="cert-zoom-icon"><i class="fas fa-expand-alt"></i></div>
-        </div>
-        <div class="cert-body">
-          <div class="cert-name">HTML &amp; CSS Certificate</div>
-          <div class="cert-desc">Mastered Responsive Web Design on FreeCodeCamp.</div>
         </div>
       </div>
 
-      <div class="cert-card " data-reveal="scale" data-lightbox="images/cert3.webp">
-        <div class="cert-img-wrap">
-          <img src="images/cert3.webp" alt="Coding Badge" loading="lazy" decoding="async">
-          <div class="cert-zoom-icon"><i class="fas fa-expand-alt"></i></div>
+
+      <div class="about-chapter-block achievements-block" data-reveal="fade-up">
+        <div class="chapter-block-header">
+          <div class="chapter-num-wrap">
+            <span class="chapter-num">03</span>
+            <span class="chapter-tag">VERIFIED MILESTONES</span>
+          </div>
+          <h3 class="chapter-title">Achievements</h3>
         </div>
-        <div class="cert-body">
-          <div class="cert-name">Coding Badge</div>
-          <div class="cert-desc">Completed 500+ problems on CodeChef platform.</div>
+
+        <div class="achievements-editorial-grid">
+
+          <div class="ach-editorial-card">
+            <div class="ach-card-header">
+              <span class="ach-platform-badge">CodeChef</span>
+              <i class="fas fa-trophy ach-icon" aria-hidden="true"></i>
+            </div>
+            <h4 class="ach-metric">500+ Problems</h4>
+            <p class="ach-desc">Solved on CodeChef with an active 100-day consistency streak</p>
+          </div>
+
+          <div class="ach-editorial-card">
+            <div class="ach-card-header">
+              <span class="ach-platform-badge">FreeCodeCamp</span>
+              <i class="fas fa-code ach-icon" aria-hidden="true"></i>
+            </div>
+            <h4 class="ach-metric">Responsive Web Design</h4>
+            <p class="ach-desc">Comprehensive developer certification covering semantic layout and accessibility</p>
+          </div>
+
+          <div class="ach-editorial-card">
+            <div class="ach-card-header">
+              <span class="ach-platform-badge">AWS / TATA</span>
+              <i class="fab fa-aws ach-icon" aria-hidden="true"></i>
+            </div>
+            <h4 class="ach-metric">Virtual Experience</h4>
+            <p class="ach-desc">Hands-on industry simulation program in cloud engineering and enterprise solutions</p>
+          </div>
+
+          <div class="ach-editorial-card">
+            <div class="ach-card-header">
+              <span class="ach-platform-badge">LinkedIn</span>
+              <i class="fab fa-linkedin ach-icon" aria-hidden="true"></i>
+            </div>
+            <h4 class="ach-metric">Prompt Engineering</h4>
+            <p class="ach-desc">Professional learning credential in generative AI workflows and modern prompting</p>
+          </div>
+
         </div>
       </div>
 
-      <div class="cert-card " data-reveal="scale" data-lightbox="images/cert4.webp">
-        <div class="cert-img-wrap">
-          <img src="images/cert4.webp" alt="Consistency Badge" loading="lazy" decoding="async">
-          <div class="cert-zoom-icon"><i class="fas fa-expand-alt"></i></div>
-        </div>
-        <div class="cert-body">
-          <div class="cert-name">Consistency Badge</div>
-          <div class="cert-desc">Achieved 100 Days Streak on CodeChef platform.</div>
-        </div>
-      </div>
 
-      <div class="cert-card" data-reveal="scale" data-lightbox="images/cert5.webp">
-        <div class="cert-img-wrap">
-          <img src="images/cert5.webp" alt="AWS Solutions Architecture" loading="lazy" decoding="async">
-          <div class="cert-zoom-icon"><i class="fas fa-expand-alt"></i></div>
-        </div>
-        <div class="cert-body">
-          <div class="cert-name">AWS Solutions Architecture</div>
-          <div class="cert-desc">Completed AWS Virtual Experience Program.</div>
-        </div>
-      </div>
-
-      <div class="cert-card" data-reveal="scale" data-lightbox="images/cert6.webp">
-        <div class="cert-img-wrap">
-          <img src="images/cert6.webp" alt="LinkedIn Prompt Engineering" loading="lazy" decoding="async">
-          <div class="cert-zoom-icon"><i class="fas fa-expand-alt"></i></div>
-        </div>
-        <div class="cert-body">
-          <div class="cert-name">Prompt Engineering</div>
-          <div class="cert-desc">LinkedIn AI Prompt Mastery Certificate.</div>
-        </div>
-      </div>
-
-      <div class="cert-card " data-reveal="scale" data-lightbox="images/cert7.webp">
-        <div class="cert-img-wrap">
-          <img src="images/cert7.webp" alt="TATA Cybersecurity Analyst" loading="lazy" decoding="async">
-          <div class="cert-zoom-icon"><i class="fas fa-expand-alt"></i></div>
-        </div>
-        <div class="cert-body">
-          <div class="cert-name">TATA Cybersecurity Analyst</div>
-          <div class="cert-desc">Completed TATA Virtual Experience Program.</div>
+      <div class="about-connect-strip" data-reveal="fade-up">
+        <span class="connect-strip-label">Connect Directly</span>
+        <div class="connect-strip-links">
+          <a href="mailto:kasi.offcl@gmail.com" class="connect-pill">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <span>kasi.offcl@gmail.com</span>
+          </a>
+          <a href="https://github.com/KasiDEVX" target="_blank" rel="noopener" class="connect-pill">
+            <i class="fab fa-github" aria-hidden="true"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/kasivishwanathanp/" target="_blank" rel="noopener" class="connect-pill">
+            <i class="fab fa-linkedin" aria-hidden="true"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://www.instagram.com/devx.kasi/" target="_blank" rel="noopener" class="connect-pill">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+            <span>Instagram</span>
+          </a>
         </div>
       </div>
 
     </div>
-  </div>
-</section>
+  </section>
+
+  <section id="certs">
+    <div class="section-dots section-dots--certs" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="container certs-container">
 
 
-<section id="contact">
-  <div class="container">
-    <div class="contact-layout">
+      <div class="certs-header" data-reveal="left">
+        <div class="section-label">Selected Credentials</div>
+        <h2 class="certs-title">My Certificates</h2>
+        <p class="certs-subtitle">A curated archive of verified certifications and industry programs.</p>
+      </div>
 
-      <!-- Left: headline + details -->
-      <div class="contact-left">
-        <div class="section-label">Get In Touch</div>
-        <h2 class="contact-headline">Let's<br><em>Work</em><br>Together.</h2>
 
-        <div class="contact-detail">
-          <span class="contact-detail-label">Email</span>
-          <a href="mailto:kasi.offcl@gmail.com" class="contact-detail-val">kasi.offcl@gmail.com</a>
-        </div>
-        <div class="contact-detail">
-          <span class="contact-detail-label">Location</span>
-          <span class="contact-detail-val">Tenkasi, Tamil Nadu, India</span>
-        </div>
-
-        <div class="social-row">
-          <a href="https://www.facebook.com/profile.php?id=61578901435182" class="social-btn" target="_blank"
-            rel="noopener" aria-label="Facebook">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://x.com/Kasi_branded" class="social-btn" target="_blank" rel="noopener" aria-label="Twitter">
-            <i class="fab fa-x-twitter"></i>
-          </a>
-          <a href="https://www.instagram.com/devx.kasi/" class="social-btn" target="_blank" rel="noopener"
-            aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/kasivishwanathanp/" class="social-btn" target="_blank" rel="noopener"
-            aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="https://github.com/KasiDEVX" class="social-btn" target="_blank" rel="noopener" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
+      <div class="cert-featured-wrap" data-reveal="fade-up">
+        <div class="cert-card cert-card--primary" data-lightbox="images/metafrontend.webp" tabindex="0" role="button"
+          aria-label="Open certificate details: Introduction to Front-End Development">
+          <div class="cert-primary-inner">
+            <div class="cert-img-wrap cert-primary-img-wrap">
+              <img src="images/metafrontend.webp" alt="Meta Introduction to Front-End Development Certificate"
+                loading="lazy" decoding="async">
+              <div class="cert-zoom-pill">
+                <i class="fas fa-expand-alt" aria-hidden="true"></i>
+                <span>View Full Credential</span>
+              </div>
+            </div>
+            <div class="cert-primary-content">
+              <div class="cert-badge-row">
+                <span class="cert-primary-badge">Featured Credential</span>
+                <span class="cert-meta-item">Meta &middot; Coursera</span>
+              </div>
+              <h3 class="cert-name cert-primary-name">Front-End Development</h3>
+              <p class="cert-desc cert-primary-desc">
+                Authorized by Meta and offered through Coursera, covering foundational frontend engineering, semantic
+                web standards, modern UI architecture, and responsive design systems.
+              </p>
+              <div class="cert-primary-cta">
+                <span>Inspect Certificate</span>
+                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="contact-right">
-        <div class="contact-form-wrap">
-          <form id="contact-form" name="contact" method="post" data-netlify="true" netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="contact">
-            <p style="display:none"><label>Don't fill: <input name="bot-field"></label></p>
 
-            <div class="form-row">
-              <div class="form-group">
-                <input type="text" id="fname" name="name" placeholder=" " required autocomplete="name">
-                <label for="fname">Name</label>
+      <div class="certs-collection-wrap">
+        <div class="certs-collection-label" data-reveal="fade-up">
+          <span>Other Verified Credentials</span>
+        </div>
+
+        <div class="certs-grid">
+
+
+          <div class="cert-card cert-card--secondary" data-reveal="scale" data-lightbox="images/cert5.webp" tabindex="0"
+            role="button" aria-label="Open certificate details: AWS Solutions Architecture">
+            <div class="cert-img-wrap">
+              <img src="images/cert5.webp" alt="AWS Solutions Architecture Certificate" loading="lazy" decoding="async">
+              <div class="cert-zoom-icon"><i class="fas fa-expand-alt" aria-hidden="true"></i></div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-issuer-row">
+                <span class="cert-issuer">AWS / Forage</span>
               </div>
+              <h4 class="cert-name">AWS Solutions Architecture</h4>
+              <p class="cert-desc">Completed AWS Solutions Architecture Virtual Experience Program on Forage platform.
+              </p>
+            </div>
+          </div>
+
+
+          <div class="cert-card cert-card--secondary" data-reveal="scale" data-lightbox="images/nptel.webp" tabindex="0"
+            role="button" aria-label="Open certificate details: Programming In Java (Elite)">
+            <div class="cert-img-wrap">
+              <img src="images/nptel.webp" alt="Programming In Java — NPTEL IIT Kharagpur" loading="lazy"
+                decoding="async">
+              <div class="cert-zoom-icon"><i class="fas fa-expand-alt" aria-hidden="true"></i></div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-issuer-row">
+                <span class="cert-issuer">NPTEL &middot; IIT Kharagpur</span>
+              </div>
+              <h4 class="cert-name">Programming In Java</h4>
+              <p class="cert-desc">Elite 12-week certification in Java, OOP, and data structures (Score: 91%).</p>
+            </div>
+          </div>
+
+
+          <div class="cert-card cert-card--secondary" data-reveal="scale" data-lightbox="images/googleplay listing.webp"
+            tabindex="0" role="button" aria-label="Open certificate details: Store Listing Certificate">
+            <div class="cert-img-wrap">
+              <img src="images/googleplay listing.webp" alt="Google Play Store Listing Certificate" loading="lazy"
+                decoding="async">
+              <div class="cert-zoom-icon"><i class="fas fa-expand-alt" aria-hidden="true"></i></div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-issuer-row">
+                <span class="cert-issuer">Google Play Academy</span>
+              </div>
+              <h4 class="cert-name">Store Listing Certificate</h4>
+              <p class="cert-desc">Certified in Google Play Store listing optimization and policy compliance.</p>
+            </div>
+          </div>
+
+
+          <div class="cert-card cert-card--secondary cert-card--badge-fit" data-reveal="scale"
+            data-lightbox="images/Aws cloud  practioner.webp" tabindex="0" role="button"
+            aria-label="Open certificate details: AWS Cloud Quest Cloud Practitioner">
+            <div class="cert-img-wrap">
+              <img src="images/Aws cloud  practioner.webp" alt="AWS Cloud Quest: Cloud Practitioner" loading="lazy"
+                decoding="async">
+              <div class="cert-zoom-icon"><i class="fas fa-expand-alt" aria-hidden="true"></i></div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-issuer-row">
+                <span class="cert-issuer">Amazon Web Services</span>
+              </div>
+              <h4 class="cert-name">AWS Cloud Practitioner</h4>
+              <p class="cert-desc">Cloud Quest trained certification covering AWS cloud computing fundamentals.</p>
+            </div>
+          </div>
+
+
+          <div class="cert-card cert-card--secondary" data-reveal="scale" data-lightbox="images/cert6.webp" tabindex="0"
+            role="button" aria-label="Open certificate details: Prompt Engineering">
+            <div class="cert-img-wrap">
+              <img src="images/cert6.webp" alt="LinkedIn Prompt Engineering" loading="lazy" decoding="async">
+              <div class="cert-zoom-icon"><i class="fas fa-expand-alt" aria-hidden="true"></i></div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-issuer-row">
+                <span class="cert-issuer">LinkedIn Learning</span>
+              </div>
+              <h4 class="cert-name">Prompt Engineering</h4>
+              <p class="cert-desc">LinkedIn AI Prompt Mastery Certificate.</p>
+            </div>
+          </div>
+
+
+          <div class="cert-card cert-card--secondary" data-reveal="scale" data-lightbox="images/cert7.webp" tabindex="0"
+            role="button" aria-label="Open certificate details: TATA Cybersecurity Analyst">
+            <div class="cert-img-wrap">
+              <img src="images/cert7.webp" alt="TATA Cybersecurity Analyst" loading="lazy" decoding="async">
+              <div class="cert-zoom-icon"><i class="fas fa-expand-alt" aria-hidden="true"></i></div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-issuer-row">
+                <span class="cert-issuer">TATA / Forage</span>
+              </div>
+              <h4 class="cert-name">TATA Cybersecurity Analyst</h4>
+              <p class="cert-desc">Completed TATA Cybersecurity Virtual Experience Program.</p>
+            </div>
+          </div>
+
+
+          <div class="cert-card cert-card--secondary" data-reveal="scale" data-lightbox="images/cert1.webp" tabindex="0"
+            role="button" aria-label="Open certificate details: Bootstrap Certificate">
+            <div class="cert-img-wrap">
+              <img src="images/cert1.webp" alt="Bootstrap Certificate" loading="lazy" decoding="async">
+              <div class="cert-zoom-icon"><i class="fas fa-expand-alt" aria-hidden="true"></i></div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-issuer-row">
+                <span class="cert-issuer">FreeCodeCamp</span>
+              </div>
+              <h4 class="cert-name">Bootstrap Certificate</h4>
+              <p class="cert-desc">Completed Bootstrap course on FreeCodeCamp platform.</p>
+            </div>
+          </div>
+
+
+          <div class="cert-card cert-card--secondary" data-reveal="scale" data-lightbox="images/cert2.webp" tabindex="0"
+            role="button" aria-label="Open certificate details: HTML & CSS Certificate">
+            <div class="cert-img-wrap">
+              <img src="images/cert2.webp" alt="HTML & CSS Certificate" loading="lazy" decoding="async">
+              <div class="cert-zoom-icon"><i class="fas fa-expand-alt" aria-hidden="true"></i></div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-issuer-row">
+                <span class="cert-issuer">FreeCodeCamp</span>
+              </div>
+              <h4 class="cert-name">HTML &amp; CSS Certificate</h4>
+              <p class="cert-desc">Mastered Responsive Web Design on FreeCodeCamp.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="coding-achievements-wrap" data-reveal="fade-up">
+        <div class="coding-achievements-header">
+          <span class="section-label">Platform Recognition</span>
+          <h3 class="coding-achievements-title">Coding Achievements</h3>
+        </div>
+
+        <div class="coding-achievements-strip">
+
+          <div class="cert-card coding-badge-card" data-lightbox="images/cert3.webp" tabindex="0" role="button"
+            aria-label="Open badge details: CodeChef 500+ Problems Solved">
+            <div class="coding-badge-visual">
+              <img src="images/cert3.webp" alt="CodeChef 500+ Problems Solved" loading="lazy" decoding="async">
+              <div class="cert-zoom-icon"><i class="fas fa-expand-alt" aria-hidden="true"></i></div>
+            </div>
+            <div class="coding-badge-info">
+              <div class="badge-tag">CodeChef &middot; Gold</div>
+              <h4 class="cert-name">500+ Problems</h4>
+              <p class="cert-desc">Completed 500+ problems on CodeChef platform.</p>
+            </div>
+          </div>
+
+          <div class="cert-card coding-badge-card" data-lightbox="images/cert4.webp" tabindex="0" role="button"
+            aria-label="Open badge details: CodeChef 100-Day Consistency Streak">
+            <div class="coding-badge-visual">
+              <img src="images/cert4.webp" alt="CodeChef 100-Day Consistency Streak" loading="lazy" decoding="async">
+              <div class="cert-zoom-icon"><i class="fas fa-expand-alt" aria-hidden="true"></i></div>
+            </div>
+            <div class="coding-badge-info">
+              <div class="badge-tag">CodeChef &middot; Diamond</div>
+              <h4 class="cert-name">100-Day Streak</h4>
+              <p class="cert-desc">Achieved 100 Days Streak on CodeChef platform.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-atmosphere" aria-hidden="true">
+      <div class="contact-glow"></div>
+      <div class="contact-grain"></div>
+      <div class="contact-fog">
+        <img src="images/cloud_right_cinematic.webp" alt="" class="contact-fog-img" loading="lazy" decoding="async">
+      </div>
+    </div>
+
+    <div class="container contact-container">
+      <div class="contact-layout">
+
+
+        <div class="contact-left">
+          <div class="contact-eyebrow">
+            <span class="section-label">Get In Touch</span>
+          </div>
+
+          <h2 class="contact-headline">
+            <span class="cta-word cta-word--1">LET'S</span>
+            <span class="cta-word cta-word--2"><em>WORK</em></span>
+            <span class="cta-word cta-word--3">TOGETHER.</span>
+          </h2>
+
+          <p class="contact-lead">
+            Have an idea, project, or experience in mind?<br>
+            Let's build something worth remembering.
+          </p>
+
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <span class="contact-info-label">Email</span>
+              <a href="mailto:kasi.offcl@gmail.com" class="contact-info-link">kasi.offcl@gmail.com</a>
+            </div>
+            <div class="contact-info-item">
+              <span class="contact-info-label">Location</span>
+              <span class="contact-info-text">Tenkasi, Tamil Nadu, India</span>
+            </div>
+            <div class="contact-info-item">
+              <span class="contact-info-label">Networks</span>
+              <div class="contact-social-pills">
+                <a href="https://github.com/KasiDEVX" class="contact-pill-btn" target="_blank" rel="noopener"
+                  aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                  <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/kasivishwanathanp/" class="contact-pill-btn" target="_blank"
+                  rel="noopener" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+                  <span>LinkedIn</span>
+                </a>
+                <a href="https://x.com/Kasi_branded" class="contact-pill-btn" target="_blank" rel="noopener"
+                  aria-label="Twitter / X">
+                  <i class="fab fa-x-twitter"></i>
+                  <span>X</span>
+                </a>
+                <a href="https://www.instagram.com/devx.kasi/" class="contact-pill-btn" target="_blank" rel="noopener"
+                  aria-label="Instagram">
+                  <i class="fab fa-instagram"></i>
+                  <span>Instagram</span>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61578901435182" class="contact-pill-btn"
+                  target="_blank" rel="noopener" aria-label="Facebook">
+                  <i class="fab fa-facebook-f"></i>
+                  <span>Facebook</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="contact-right">
+          <div class="contact-form-card">
+            <div class="form-card-header">
+              <span class="form-card-title">Send a Message</span>
+              <span class="form-card-status"><span class="status-indicator"></span> Available for projects</span>
+            </div>
+
+            <form id="contact-form" name="contact" method="post" data-netlify="true" netlify-honeypot="bot-field">
+              <input type="hidden" name="form-name" value="contact">
+              <p style="display:none"><label>Don't fill: <input name="bot-field"></label></p>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <input type="text" id="fname" name="name" placeholder=" " required autocomplete="name">
+                  <label for="fname">Name</label>
+                </div>
+                <div class="form-group">
+                  <input type="email" id="femail" name="email" placeholder=" " required autocomplete="email">
+                  <label for="femail">Email</label>
+                </div>
+              </div>
+
               <div class="form-group">
-                <input type="email" id="femail" name="email" placeholder=" " required autocomplete="email">
-                <label for="femail">Email</label>
+                <input type="text" id="fsubject" name="subject" placeholder=" ">
+                <label for="fsubject">Subject</label>
+              </div>
+
+              <div class="form-group">
+                <textarea id="fmessage" name="message" placeholder=" " required></textarea>
+                <label for="fmessage">Message</label>
+              </div>
+
+              <button type="submit" class="btn-form-submit">
+                <span>Send Message</span>
+                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              </button>
+            </form>
+
+            <div id="form-success" class="form-success" role="status">
+              Message sent — I will be in touch soon.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <footer class="contact-footer-bar">
+      <div class="container footer-container">
+
+
+        <div class="footer-top-grid">
+
+
+          <div class="footer-intro-block">
+            <p class="footer-statement">
+              Kasi is a frontend developer &amp; designer building modern, cinematic digital experiences.
+            </p>
+            <div class="footer-squircle-row" aria-label="Social Profiles">
+              <a href="https://x.com/Kasi_branded" target="_blank" rel="noopener" class="footer-squircle-btn"
+                aria-label="X (Twitter)">
+                <i class="fab fa-x-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.instagram.com/devx.kasi/" target="_blank" rel="noopener" class="footer-squircle-btn"
+                aria-label="Instagram">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="https://github.com/KasiDEVX" target="_blank" rel="noopener" class="footer-squircle-btn"
+                aria-label="GitHub">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/kasivishwanathanp/" target="_blank" rel="noopener"
+                class="footer-squircle-btn" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61578901435182" target="_blank" rel="noopener"
+                class="footer-squircle-btn" aria-label="Facebook">
+                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+
+          <div class="footer-nav-columns">
+
+
+            <div class="footer-nav-col">
+              <h4 class="footer-col-heading">Work</h4>
+              <ul class="footer-col-list">
+                <li><a href="#work" class="footer-col-link">Selected Projects</a></li>
+                <li><a href="#work" class="footer-col-link">Case Studies</a></li>
+                <li><a href="#certs" class="footer-col-link">Credentials</a></li>
+              </ul>
+            </div>
+
+
+            <div class="footer-nav-col">
+              <h4 class="footer-col-heading">Explore</h4>
+              <ul class="footer-col-list">
+                <li><a href="#resume" class="footer-col-link">About Me</a></li>
+                <li><a href="#resume" class="footer-col-link">Experience</a></li>
+                <li><a href="#resume" class="footer-col-link">Skills &amp; Toolkit</a></li>
+              </ul>
+            </div>
+
+
+            <div class="footer-nav-col">
+              <h4 class="footer-col-heading">Connect</h4>
+              <ul class="footer-col-list">
+                <li><a href="#contact" class="footer-col-link">Contact Form</a></li>
+                <li><a href="mailto:kasi.offcl@gmail.com" class="footer-col-link">kasi.offcl@gmail.com</a></li>
+                <li>
+                  <a href="#contact" class="footer-col-link footer-col-link--badge">
+                    <span>Status</span>
+                    <span class="footer-status-pill">AVAILABLE</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Bottom Giant Brand Wordmark (Hover shows cursor state, click/type launches terminal) -->
+        <div class="footer-brand-stage" id="footer-brand-stage" role="button" tabindex="0"
+          aria-label="Kasi Terminal: Type KASI to launch">
+          <div class="footer-wordmark-mask">
+            <span class="footer-giant-wordmark">KASI</span>
+          </div>
+        </div>
+
+
+        <div class="footer-meta-row">
+          <div class="footer-meta-left">
+            <span>&copy; 2026 Kasi Vishwanathan / Reject all substitutes</span>
+          </div>
+          <div class="footer-meta-right">
+            <a href="#page-top" class="footer-meta-link">Back to top &uarr;</a>
+            <a href="mailto:kasi.offcl@gmail.com" class="footer-meta-link">Email</a>
+            <a href="https://github.com/KasiDEVX" target="_blank" rel="noopener" class="footer-meta-link">GitHub</a>
+            <a href="https://www.linkedin.com/in/kasivishwanathanp/" target="_blank" rel="noopener"
+              class="footer-meta-link">LinkedIn</a>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+
+    <div class="contact-fade-to-black" aria-hidden="true"></div>
+  </section>
+
+  <div id="lightbox">
+    <button class="lb-close" id="lb-close" aria-label="Close"><i class="fas fa-times"></i></button>
+    <img id="lb-img" src="" alt="Full-size image" decoding="async">
+  </div>
+
+  <div id="project-modal" aria-hidden="true">
+    <button class="project-modal-close" id="project-modal-close" aria-label="Close project details">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="project-modal-inner">
+      <div class="project-modal-image-wrap">
+        <img id="project-modal-image" src="" alt="Selected project image" decoding="async">
+      </div>
+      <div class="project-modal-content">
+        <div class="project-modal-label" id="project-modal-label"></div>
+        <h3 class="project-modal-title" id="project-modal-title"></h3>
+        <p class="project-modal-desc" id="project-modal-desc"></p>
+
+        <div class="project-modal-case-study">
+          <div class="case-item" id="case-block-problem">
+            <h4>Problem / Objective</h4>
+            <p id="project-modal-problem"></p>
+          </div>
+          <div class="case-item" id="case-block-role">
+            <h4>My Role</h4>
+            <p id="project-modal-role"></p>
+          </div>
+          <div class="case-item" id="case-block-result">
+            <h4>Result / Impact</h4>
+            <p id="project-modal-result"></p>
+          </div>
+        </div>
+
+        <div class="project-modal-tech" id="project-modal-tech"></div>
+        <div class="project-modal-actions">
+          <a href="#" target="_blank" rel="noopener" class="project-modal-live" id="project-modal-live"
+            style="display:none"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          <a href="#" target="_blank" rel="noopener" class="project-modal-github" id="project-modal-github"
+            style="display:none"><i class="fab fa-github"></i> View on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Secret KASI Cyber Terminal Modal (Type 'KASI' to activate) -->
+  <div id="kasi-terminal" class="kasi-terminal-modal" aria-hidden="true" role="dialog" aria-modal="true"
+    aria-label="Kasi Terminal">
+    <div class="terminal-backdrop" id="terminal-backdrop"></div>
+    <div class="terminal-window">
+      <!-- Window Titlebar -->
+      <div class="terminal-header">
+        <div class="terminal-dots">
+          <button type="button" class="term-dot term-dot--red" id="terminal-close-dot" title="Close terminal"
+            aria-label="Close"></button>
+          <span class="term-dot term-dot--yellow" aria-hidden="true"></span>
+          <span class="term-dot term-dot--green" aria-hidden="true"></span>
+        </div>
+        <div class="terminal-title">
+          <i class="fas fa-terminal" aria-hidden="true"></i> KASI // ARCHIVAL CONSOLE
+        </div>
+        <div class="terminal-header-meta">
+          <span class="terminal-clock" id="terminal-clock">14:48</span>
+          <button type="button" class="terminal-close-btn" id="terminal-close-btn" aria-label="Close terminal">
+            <i class="fas fa-times" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Terminal Rice Canvas -->
+      <div class="terminal-body" id="terminal-body">
+        <!-- Dual Column Rice Section (Matches Site Editorial Luxury Palette) -->
+        <div class="terminal-rice-layout">
+          <!-- Left Column: Attack on Titan Wings of Freedom Emblem with Cinematic Cloud Filter -->
+          <div class="terminal-rice-left">
+            <div class="aot-logo-wrapper">
+              <div class="aot-emblem-frame">
+                <img src="images/AOT_clean.webp" alt="Attack on Titan Wings of Freedom Emblem" class="aot-emblem-img"
+                  width="1399" height="1947" loading="lazy">
+              </div>
+              <div class="aot-logo-caption">
+                <span class="aot-caption-sub">Survey Corps &bull; Shinzou wo Sasageyo</span>
+                <h3 class="aot-caption-title">Wings of Freedom</h3>
+                <p class="aot-caption-quote">&ldquo;Devote your heart to the craft.&rdquo;</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Real Developer Matrix & Archive (Site Luxury Style) -->
+          <div class="terminal-rice-right">
+            <!-- Box 1: Developer Profile -->
+            <div class="fetch-box">
+              <div class="fetch-box-header">
+                <span class="box-bracket">╭─</span>
+                <span class="box-tag"><span class="box-dot box-dot--gold"></span> : Developer Profile</span>
+                <span class="box-line">───────────────</span>
+                <span class="box-bracket">╮</span>
+              </div>
+              <div class="fetch-box-content">
+                <div class="fetch-row">
+                  <span class="fetch-icon icon-gold"><i class="fas fa-user" aria-hidden="true"></i></span>
+                  <span class="fetch-label">Developer</span>
+                  <span class="fetch-sep">:</span>
+                  <span class="fetch-val val-gold">Kasi Vishwanathan P</span>
+                </div>
+                <div class="fetch-row">
+                  <span class="fetch-icon icon-gold"><i class="fas fa-code" aria-hidden="true"></i></span>
+                  <span class="fetch-label">Role</span>
+                  <span class="fetch-sep">:</span>
+                  <span class="fetch-val">Frontend Engineer &amp; Designer</span>
+                </div>
+                <div class="fetch-row">
+                  <span class="fetch-icon icon-gold"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span>
+                  <span class="fetch-label">Location</span>
+                  <span class="fetch-sep">:</span>
+                  <span class="fetch-val val-cream">Tenkasi, Tamil Nadu, India</span>
+                </div>
+                <div class="fetch-row">
+                  <span class="fetch-icon icon-gold"><i class="fas fa-layer-group" aria-hidden="true"></i></span>
+                  <span class="fetch-label">Stack</span>
+                  <span class="fetch-sep">:</span>
+                  <span class="fetch-val">Modern JS, React, GSAP, Node</span>
+                </div>
+                <div class="fetch-row">
+                  <span class="fetch-icon icon-gold"><i class="fas fa-pen-nib" aria-hidden="true"></i></span>
+                  <span class="fetch-label">Focus</span>
+                  <span class="fetch-sep">:</span>
+                  <span class="fetch-val">Digital Craft &amp; Architecture</span>
+                </div>
+                <div class="fetch-row">
+                  <span class="fetch-icon icon-gold"><i class="fas fa-circle-notch" aria-hidden="true"></i></span>
+                  <span class="fetch-label">Status</span>
+                  <span class="fetch-sep">:</span>
+                  <span class="fetch-val val-gold">Available for Opportunities</span>
+                </div>
+                <div class="fetch-row">
+                  <span class="fetch-icon icon-gold"><i class="fas fa-quote-left" aria-hidden="true"></i></span>
+                  <span class="fetch-label">Motto</span>
+                  <span class="fetch-sep">:</span>
+                  <span class="fetch-val val-dim">&ldquo;I refine. I remove. I rebuild.&rdquo;</span>
+                </div>
+              </div>
+              <div class="fetch-box-footer">
+                <span class="box-bracket">╰</span><span
+                  class="box-line">────────────────────────────────────────</span><span class="box-bracket">╯</span>
               </div>
             </div>
 
-            <div class="form-group">
-              <input type="text" id="fsubject" name="subject" placeholder=" ">
-              <label for="fsubject">Subject</label>
+            <!-- Box 2: Systems & Archive Matrix -->
+            <div class="fetch-box">
+              <div class="fetch-box-header">
+                <span class="box-bracket">╭─</span>
+                <span class="box-tag"><span class="box-dot box-dot--gold"></span> : Portfolio Systems &amp;
+                  Archive</span>
+                <span class="box-line">─────────</span>
+                <span class="box-bracket">╮</span>
+              </div>
+              <div class="fetch-box-content">
+                <div class="fetch-row">
+                  <span class="fetch-icon icon-gold"><i class="fas fa-cubes" aria-hidden="true"></i></span>
+                  <span class="fetch-label">Projects</span>
+                  <span class="fetch-sep">:</span>
+                  <span class="fetch-val val-gold">06 Selected Works (02 Flagships)</span>
+                </div>
+                <div class="fetch-row">
+                  <span class="fetch-icon icon-gold"><i class="fas fa-shield-alt" aria-hidden="true"></i></span>
+                  <span class="fetch-label">Flagship 1</span>
+                  <span class="fetch-sep">:</span>
+                  <span class="fetch-val">SkillForge (Anti-Copy Engine)</span>
+                </div>
+                <div class="fetch-row">
+                  <span class="fetch-icon icon-gold"><i class="fas fa-project-diagram" aria-hidden="true"></i></span>
+                  <span class="fetch-label">Flagship 2</span>
+                  <span class="fetch-sep">:</span>
+                  <span class="fetch-val">GitInsight (Security Pipeline)</span>
+                </div>
+                <div class="fetch-row">
+                  <span class="fetch-icon icon-gold"><i class="fas fa-award" aria-hidden="true"></i></span>
+                  <span class="fetch-label">Credentials</span>
+                  <span class="fetch-sep">:</span>
+                  <span class="fetch-val">Meta Frontend, AWS, Cisco, NPTEL</span>
+                </div>
+                <div class="fetch-row">
+                  <span class="fetch-icon icon-gold"><i class="fas fa-tachometer-alt" aria-hidden="true"></i></span>
+                  <span class="fetch-label">Performance</span>
+                  <span class="fetch-sep">:</span>
+                  <span class="fetch-val val-cream">Zero Bloat, 60fps Smooth-Scroll</span>
+                </div>
+                <div class="fetch-row">
+                  <span class="fetch-icon icon-gold"><i class="fas fa-clock" aria-hidden="true"></i></span>
+                  <span class="fetch-label">Uptime</span>
+                  <span class="fetch-sep">:</span>
+                  <span class="fetch-val" id="rice-uptime">0 mins, 5 secs</span>
+                </div>
+              </div>
+              <div class="fetch-box-footer">
+                <span class="box-bracket">╰</span><span
+                  class="box-line">────────────────────────────────────────</span><span class="box-bracket">╯</span>
+              </div>
             </div>
 
-            <div class="form-group">
-              <textarea id="fmessage" name="message" placeholder=" " required></textarea>
-              <label for="fmessage">Message</label>
+            <!-- Site Color Palette Swatches (Site Design System Tokens) -->
+            <div class="rice-dots-row" aria-label="Portfolio design system palette">
+              <span class="rice-dot" style="--dot-color: #0d0d0d;" title="Obsidian Jet (--black)"></span>
+              <span class="rice-dot" style="--dot-color: #1a1a18;" title="Site Ink (--ink)"></span>
+              <span class="rice-dot" style="--dot-color: #5a4422;" title="Raw Bronze"></span>
+              <span class="rice-dot" style="--dot-color: #8c6f3d;" title="Deep Gold"></span>
+              <span class="rice-dot" style="--dot-color: #c8a96e;" title="Signature Gold (--cta-gold)"></span>
+              <span class="rice-dot" style="--dot-color: #d9be8a;" title="Warm Champagne (--gold-light)"></span>
+              <span class="rice-dot" style="--dot-color: #e8e0ce;" title="Editorial Cream (--cream)"></span>
+              <span class="rice-dot" style="--dot-color: #ffffff;" title="Pure White (--white)"></span>
             </div>
+          </div>
+        </div>
 
-            <button type="submit" class="btn-form-submit">
-              Send Message <i class="fas fa-arrow-right" style="font-size:.7rem"></i>
-            </button>
+        <!-- Interactive Terminal Pane (Chips, Live Output, Prompt) -->
+        <div class="terminal-interactive-pane">
+          <div class="terminal-chips" aria-label="Quick terminal commands">
+            <button type="button" class="term-chip" data-cmd="projects">projects</button>
+            <button type="button" class="term-chip" data-cmd="about">about</button>
+            <button type="button" class="term-chip" data-cmd="skills">skills</button>
+            <button type="button" class="term-chip" data-cmd="contact">contact</button>
+            <button type="button" class="term-chip term-chip--aot" data-cmd="sasageyo">sasageyo</button>
+            <button type="button" class="term-chip" data-cmd="clear">clear</button>
+            <button type="button" class="term-chip" data-cmd="exit">exit</button>
+          </div>
+
+          <div class="terminal-output" id="terminal-output"></div>
+
+          <form class="terminal-prompt-form" id="terminal-form" autocomplete="off">
+            <label for="terminal-input" class="term-prompt-symbol">&gt;</label>
+            <input type="text" id="terminal-input" class="terminal-input" spellcheck="false" autocomplete="off"
+              placeholder="type a command (e.g. help, sasageyo, projects, exit)...">
+            <span class="term-prompt-clock" id="term-live-time">14:48</span>
           </form>
-
-          <div id="form-success" class="form-success" role="status">
-            ✦ Message sent — I'll be in touch soon!
-          </div>
         </div>
       </div>
-
     </div>
   </div>
-</section>
 
-
-<footer>
-  <div class="container">
-    <div class="footer-inner">
-      <div class="footer-logo">Eren_Kasi<span>.</span></div>
-      <p class="footer-copy">All rights reserved · KASI @ 2026</p>
-      <div class="footer-links">
-        <a href="https://github.com/KasiDEVX" target="_blank" class="footer-link footer-link--github">GitHub</a>
-        <a href="https://www.instagram.com/devx.kasi/" target="_blank"
-          class="footer-link footer-link--instagram">@eren_kasi</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-
-<div id="lightbox">
-  <button class="lb-close" id="lb-close" aria-label="Close"><i class="fas fa-times"></i></button>
-  <img id="lb-img" src="" alt="Full-size image" decoding="async">
-</div>
-
-<div id="project-modal" aria-hidden="true">
-  <button class="project-modal-close" id="project-modal-close" aria-label="Close project details">
-    <i class="fas fa-times"></i>
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <svg class="progress-ring" width="46" height="46">
+      <circle class="progress-ring__circle" stroke="var(--gold)" stroke-width="2" fill="transparent" r="21" cx="23"
+        cy="23" style="stroke-dasharray: 132; stroke-dashoffset: 132;" />
+    </svg>
+    <i class="fas fa-arrow-up"></i>
   </button>
-  <div class="project-modal-inner">
-    <div class="project-modal-image-wrap">
-      <img id="project-modal-image" src="" alt="Selected project image" decoding="async">
-    </div>
-    <div class="project-modal-content">
-      <div class="project-modal-label" id="project-modal-label"></div>
-      <h3 class="project-modal-title" id="project-modal-title"></h3>
-      <p class="project-modal-desc" id="project-modal-desc"></p>
 
-      <div class="project-modal-case-study">
-        <div class="case-item" id="case-block-problem">
-          <h4>Problem / Objective</h4>
-          <p id="project-modal-problem"></p>
-        </div>
-        <div class="case-item" id="case-block-role">
-          <h4>My Role</h4>
-          <p id="project-modal-role"></p>
-        </div>
-        <div class="case-item" id="case-block-result">
-          <h4>Result / Impact</h4>
-          <p id="project-modal-result"></p>
-        </div>
-      </div>
-
-      <div class="project-modal-tech" id="project-modal-tech"></div>
-      <a href="#" target="_blank" rel="noopener" class="project-modal-github" id="project-modal-github"
-        style="display:none"><i class="fab fa-github"></i> View on GitHub</a>
-    </div>
-  </div>
-</div>
-
-<button id="back-to-top" class="back-to-top" aria-label="Back to top">
-  <svg class="progress-ring" width="46" height="46">
-    <circle class="progress-ring__circle" stroke="var(--gold)" stroke-width="2" fill="transparent" r="21" cx="23"
-      cy="23" style="stroke-dasharray: 132; stroke-dashoffset: 132;" />
-  </svg>
-  <i class="fas fa-arrow-up"></i>
-</button>
-
-
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script defer src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
-<script defer src="main.js"></script>
+  <!-- CDN dependencies: must be available before local modules execute -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js" defer></script>
+  <!-- Modular JS — load order matches original main.js top-to-bottom -->
+  <script defer src="js/globals.js"></script>
+  <script defer src="js/nav.js"></script>
+  <script defer src="js/modal.js"></script>
+  <script defer src="js/lightbox.js"></script>
+  <script defer src="js/contact.js"></script>
+  <script defer src="js/easter-egg.js"></script>
+  <script defer src="js/terminal.js"></script>
+  <!-- Noscript: show site content if JS is disabled -->
+  <noscript><style>#loader{display:none!important}body{visibility:visible!important}</style></noscript>
 
 </body>
 

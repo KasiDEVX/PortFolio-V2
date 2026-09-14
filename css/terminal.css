@@ -1,0 +1,573 @@
+﻿/* Expanded Window Architecture (Editorial Luxury Archival Aesthetic) */
+.terminal-window {
+  position: relative;
+  width: 100%;
+  max-width: 980px;
+  min-height: 560px;
+  background: rgba(13, 13, 13, 0.96);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(200, 169, 110, 0.22);
+  border-radius: 16px;
+  box-shadow:
+    0 32px 80px rgba(0, 0, 0, 0.9),
+    0 4px 16px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-height: 88vh;
+  transform: scale(0.96) translateY(12px);
+  transition: transform 0.28s var(--ease-smooth);
+}
+
+.kasi-terminal-modal.is-open .terminal-window {
+  transform: scale(1) translateY(0);
+}
+
+/* Luxury Window Titlebar */
+.terminal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: rgba(18, 18, 20, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  user-select: none;
+}
+
+.terminal-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.term-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.18s ease;
+}
+
+.term-dot:hover {
+  transform: scale(1.15);
+}
+
+.term-dot--red {
+  background: #d9534f;
+}
+
+.term-dot--yellow {
+  background: #c8a96e;
+  cursor: default;
+}
+
+.term-dot--green {
+  background: #48bb78;
+  cursor: default;
+}
+
+.terminal-title {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.terminal-title i {
+  color: var(--cta-gold);
+  font-size: 0.76rem;
+}
+
+.terminal-header-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.terminal-clock {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--cta-gold);
+  letter-spacing: 0.06em;
+  background: rgba(200, 169, 110, 0.08);
+  border: 1px solid rgba(200, 169, 110, 0.2);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.terminal-close-btn {
+  background: none;
+  border: none;
+  color: rgba(232, 224, 206, 0.5);
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.terminal-close-btn:hover {
+  color: #ef4444;
+}
+
+/* Terminal Body Scroll Container */
+.terminal-body {
+  padding: clamp(18px, 2.5vw, 26px);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex: 1;
+}
+
+/* Rice Dual-Column Architecture */
+.terminal-rice-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: clamp(24px, 3.5vw, 40px);
+  align-items: center;
+}
+
+/* Left Column: Attack on Titan Wings of Freedom with Cloud Filter */
+.terminal-rice-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.aot-logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.aot-emblem-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+/* Cloud filter applied to AOT emblem as requested */
+.aot-emblem-img {
+  width: 100%;
+  max-width: 210px;
+  height: auto;
+  display: block;
+  filter:
+    brightness(0.98)
+    contrast(1.03)
+    sepia(0.28)
+    saturate(1.36)
+    hue-rotate(-8deg)
+    drop-shadow(0 8px 24px rgba(0, 0, 0, 0.16));
+  pointer-events: none;
+  user-select: none;
+  transition: transform 0.4s var(--ease-smooth);
+}
+
+.aot-logo-wrapper:hover .aot-emblem-img {
+  transform: translateY(-3px) scale(1.02);
+}
+
+.aot-logo-caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 14px;
+  text-align: center;
+}
+
+.aot-caption-sub {
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--cta-gold);
+  text-transform: uppercase;
+}
+
+.aot-caption-title {
+  font-family: var(--serif);
+  font-size: 1.55rem;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  color: var(--cream);
+  margin-top: 3px;
+  line-height: 1.15;
+}
+
+.aot-caption-quote {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  color: rgba(232, 224, 206, 0.55);
+  margin-top: 3px;
+}
+
+/* Right Column: Fastfetch ASCII/Unicode Rice Boxes */
+.terminal-rice-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.fetch-box {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  min-width: 360px;
+  max-width: 440px;
+}
+
+.fetch-box-header,
+.fetch-box-footer {
+  display: flex;
+  align-items: center;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  color: rgba(200, 169, 110, 0.35);
+  white-space: pre;
+  user-select: none;
+}
+
+.box-bracket {
+  color: var(--cta-gold);
+  font-weight: 700;
+}
+
+.box-line {
+  color: rgba(200, 169, 110, 0.22);
+  flex: 1;
+  overflow: hidden;
+}
+
+.box-tag {
+  font-family: var(--sans);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--cream);
+  padding: 0 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.box-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.box-dot--gold {
+  background: var(--cta-gold);
+}
+
+.fetch-box-content {
+  padding: 5px 14px 5px 14px;
+  margin-left: 6px;
+  margin-right: 6px;
+  border-left: 1px solid rgba(200, 169, 110, 0.2);
+  border-right: 1px solid rgba(200, 169, 110, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  background: rgba(255, 255, 255, 0.02);
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.fetch-row {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.fetch-icon {
+  width: 20px;
+  text-align: center;
+  font-size: 0.72rem;
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+
+.fetch-icon.icon-gold {
+  color: var(--cta-gold);
+}
+
+.fetch-label {
+  color: rgba(232, 224, 206, 0.65);
+  font-weight: 500;
+  width: 88px;
+  flex-shrink: 0;
+}
+
+.fetch-sep {
+  color: rgba(200, 169, 110, 0.32);
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.fetch-val {
+  color: #f7f3e8;
+  font-weight: 500;
+}
+
+.val-gold {
+  color: var(--cta-gold);
+  font-weight: 600;
+}
+
+.val-cream {
+  color: var(--cream);
+}
+
+.val-dim {
+  color: rgba(232, 224, 206, 0.5);
+  font-style: italic;
+}
+
+/* Site Color Palette Swatches */
+.rice-dots-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0 4px 14px;
+}
+
+.rice-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--dot-color);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+}
+
+.rice-dot:hover {
+  transform: scale(1.3);
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+/* Interactive Output & Prompt Section */
+.terminal-interactive-pane {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 4px;
+  border-top: 1px dashed rgba(200, 169, 110, 0.18);
+  padding-top: 14px;
+}
+
+.terminal-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.term-chip {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  padding: 4px 14px;
+  color: var(--cream);
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.term-chip:hover {
+  background: rgba(200, 169, 110, 0.14);
+  border-color: rgba(200, 169, 110, 0.4);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.term-chip--aot {
+  border-color: rgba(200, 169, 110, 0.35);
+  background: rgba(200, 169, 110, 0.08);
+  color: var(--cta-gold);
+}
+
+.term-chip--aot:hover {
+  background: rgba(200, 169, 110, 0.2);
+  border-color: var(--cta-gold);
+}
+
+.terminal-output {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.term-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  animation: termFadeIn 0.2s ease forwards;
+}
+
+@keyframes termFadeIn {
+  from { opacity: 0; transform: translateY(3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.term-entry-cmd {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--cta-gold);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.term-entry-resp {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: rgba(232, 224, 206, 0.9);
+  white-space: pre-wrap;
+  padding: 8px 14px;
+  border-left: 2px solid var(--cta-gold);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 0 6px 6px 0;
+}
+
+/* Prompt Line */
+.terminal-prompt-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  background: rgba(18, 18, 20, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: border-color 0.2s ease;
+}
+
+.terminal-prompt-form:focus-within {
+  border-color: rgba(200, 169, 110, 0.55);
+}
+
+.term-prompt-symbol {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  color: var(--cta-gold);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+.terminal-input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  padding: 2px 0;
+}
+
+.terminal-input::placeholder {
+  color: rgba(232, 224, 206, 0.35);
+}
+
+.term-prompt-clock {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  color: rgba(200, 169, 110, 0.55);
+  letter-spacing: 0.08em;
+  flex-shrink: 0;
+}
+
+/* Terminal Responsive Behavior */
+@media (max-width: 768px) {
+  .terminal-header {
+    padding: 10px 14px;
+    gap: 10px;
+  }
+
+  .terminal-title {
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .terminal-clock {
+    font-size: 0.64rem;
+    padding: 1px 6px;
+  }
+
+  .terminal-body {
+    padding: 14px 12px;
+    gap: 14px;
+  }
+
+  .terminal-rice-layout {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .terminal-rice-left {
+    padding: 0;
+  }
+
+  .aot-emblem-img {
+    max-width: 90px;
+  }
+
+  .aot-caption-title {
+    font-size: 1.3rem;
+  }
+
+  .terminal-window {
+    min-height: auto;
+    max-height: 90vh;
+  }
+
+  .fetch-box {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .fetch-box-content {
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .fetch-row {
+    font-size: 0.72rem;
+  }
+
+  .fetch-label {
+    width: 74px;
+  }
+}

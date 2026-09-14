@@ -1,0 +1,63 @@
+﻿/* ── CONNECT: Editorial Connect Bar ── */
+.about-connect-strip {
+  margin-top: clamp(64px, 7.5vw, 96px);
+  padding: 28px 32px;
+  background: rgba(255, 255, 255, 0.018);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.connect-strip-label {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(232, 224, 206, 0.45);
+}
+
+.connect-strip-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.connect-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--cream);
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.connect-pill:hover {
+  background: rgba(200, 169, 110, 0.12);
+  border-color: rgba(200, 169, 110, 0.35);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.connect-pill i {
+  font-size: 0.9rem;
+  color: rgba(232, 224, 206, 0.6);
+  transition: color 0.25s ease;
+}
+
+.connect-pill:hover i {
+  color: var(--cta-gold);
+}
+

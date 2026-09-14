@@ -1,0 +1,48 @@
+# ── OS & Editor ───────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# ── VS Code ───────────────────────────────────────
+.vscode/
+*.code-workspace
+
+# ── JetBrains IDEs ────────────────────────────────
+.idea/
+*.iml
+
+# ── Antigravity / AI tooling ──────────────────────
+.claude/
+.agents/
+.gemini/
+.playwright-mcp/
+
+# ── Node (if ever added) ──────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.pnpm-store/
+dist/
+.cache/
+
+# ── Scratch / temp ────────────────────────────────
+scratch/
+*.tmp
+*.bak
+*.orig
+
+# ── Environment & secrets ─────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── Logs ─────────────────────────────────────────
+logs/
+*.log
