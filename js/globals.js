@@ -1,4 +1,4 @@
-﻿const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // Automatic hardware/memory capability detection for high-performance Lite Mode
 if (typeof navigator !== 'undefined') {
@@ -372,28 +372,52 @@ window.addEventListener("load", () => {
   }, 120);
 });
 
-const lenis = new Lenis({
-  duration: 1.4,
-  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-  smoothWheel: true,
-  touchMultiplier: 1.5,
-  lerp: 0.08,
+// Native smooth scroll configuration
+const smoothScrollConfig = {
+  behavior: 'smooth'
+};
+
+// Native smooth scroll function for anchor links
+function nativeSmoothScrollTo(target, offset = 0) {
+  const navOffset = mainNav ? mainNav.offsetHeight + 8 : 72;
+  const targetPosition = target.getBoundingClientRect().top + window.scrollY - navOffset + offset;
+  
+  window.scrollTo({
+    top: targetPosition,
+    behavior: 'smooth'
+  });
+}
+
+// Initialize native smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener('click', (e) => {
+    const href = anchor.getAttribute('href');
+    if (!href || href === '#') return;
+    const target = document.querySelector(href);
+    if (!target) return;
+    
+    e.preventDefault();
+    nativeSmoothScrollTo(target);
+    if (typeof closeMobileMenu === 'function') {
+      closeMobileMenu();
+    }
+  });
 });
 
-// Clean single-driver integration: GSAP Ticker drives Lenis exclusively
+// GSAP ScrollTrigger setup (no Lenis needed)
 if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
-  lenis.on('scroll', ScrollTrigger.update);
-  gsap.ticker.add((time) => {
-    lenis.raf(time * 1000);
-  });
-  gsap.ticker.lagSmoothing(0);
-} else {
-  function rafFallback(time) {
-    lenis.raf(time);
-    requestAnimationFrame(rafFallback);
+
+  // Smooth scroll via GSAP's built-in normalizer — zero extra libraries,
+  // works perfectly with ScrollTrigger scrub animations.
+  // Skipped on mobile: native touch momentum is already smooth.
+  const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+  if (!isTouch && !prefersReducedMotion) {
+    ScrollTrigger.normalizeScroll({
+      allowNestedScroll: true,
+      momentum: (self) => Math.min(3.5, self.velocityY * 0.006)
+    });
   }
-  requestAnimationFrame(rafFallback);
 }
 
 if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {

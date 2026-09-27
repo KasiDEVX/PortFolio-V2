@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --black: #0d0d0d;
   --black-mid: #141414;
   --cream: #e8e0ce;
@@ -35,7 +35,6 @@
 }
 
 html {
-  scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   overflow-x: clip;

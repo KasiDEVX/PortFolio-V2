@@ -1,4 +1,4 @@
-﻿const projectModal = document.getElementById('project-modal');
+const projectModal = document.getElementById('project-modal');
 const projectModalClose = document.getElementById('project-modal-close');
 const projectModalImage = document.getElementById('project-modal-image');
 const projectModalLabel = document.getElementById('project-modal-label');
@@ -137,16 +137,28 @@ function closeProjectModal() {
 }
 
 document.querySelectorAll('.work-card').forEach((card) => {
-  if (!card.hasAttribute('tabindex')) card.setAttribute('tabindex', '0');
-  card.setAttribute('role', 'button');
-  card.setAttribute('aria-label', `Open project: ${card.dataset.projectTitle || 'Project'}`);
-  card.addEventListener('click', () => openProjectModal(card));
-  card.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      openProjectModal(card);
-    }
+  // Allow clicking the card body to open modal without overriding semantic article role
+  card.addEventListener('click', (e) => {
+    if (e.target.closest('a, button, [role="button"], input, textarea')) return;
+    openProjectModal(card);
   });
+
+  // Attach accessible button role and keyboard trigger to action target inside the card
+  const actionTarget = card.querySelector('.btn-featured-view, .work-case-btn, .work-title');
+  if (actionTarget) {
+    if (!actionTarget.hasAttribute('tabindex')) actionTarget.setAttribute('tabindex', '0');
+    if (!actionTarget.hasAttribute('role')) actionTarget.setAttribute('role', 'button');
+    const title = card.dataset.projectTitle || 'Project';
+    if (!actionTarget.hasAttribute('aria-label')) {
+      actionTarget.setAttribute('aria-label', `View details for ${title}`);
+    }
+    actionTarget.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openProjectModal(card);
+      }
+    });
+  }
 });
 
 function openCertificateModal(card) {

@@ -36,7 +36,6 @@
   background-repeat: no-repeat;
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 8vh, #000 16vh, #000 calc(100% - 140px), transparent 100%);
   mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 8vh, #000 16vh, #000 calc(100% - 140px), transparent 100%);
-  will-change: transform;
 }
 
 /* z-index 1: SMOOTH CONTINUOUS OVERLAY (starts transparent at boundary) */
@@ -95,7 +94,6 @@
   background: radial-gradient(circle at 50% 15%, rgba(200, 169, 110, 0.08), transparent 55%),
               radial-gradient(circle at 80% 45%, rgba(90, 130, 190, 0.05), transparent 50%);
   pointer-events: none;
-  will-change: transform;
 }
 
 /* z-index 30: CLOUD TRANSITION WRAPPER AT THE EXACT HERO/PROJECTS BOUNDARY */
@@ -118,7 +116,6 @@
   top: -34vh;
   height: auto;
   pointer-events: none;
-  will-change: transform;
   -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 72%, transparent 98%);
   mask-image: linear-gradient(to bottom, #000 0%, #000 72%, transparent 98%);
 }
@@ -231,6 +228,7 @@
   .cloud-wrapper {
     width: clamp(300px, 58vw, 420px);
     top: -20vh;
+    will-change: auto;
   }
 
   .cloud-left {
@@ -247,6 +245,24 @@
   .next-section-content {
     padding-top: clamp(100px, 16vw, 160px);
     padding-bottom: clamp(48px, 6vw, 80px);
+  }
+
+  .projects-bg,
+  .next-section-bg,
+  .projects-atmosphere,
+  .next-section-atmosphere {
+    will-change: auto;
+  }
+}
+
+/* Apply will-change only on desktop (non-touch) for GSAP parallax elements */
+@media (hover: hover) {
+  .cloud-wrapper,
+  .projects-bg,
+  .next-section-bg,
+  .projects-atmosphere,
+  .next-section-atmosphere {
+    will-change: transform;
   }
 }
 

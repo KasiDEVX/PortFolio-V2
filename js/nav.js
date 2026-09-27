@@ -55,9 +55,18 @@ document.querySelectorAll('.mobile-nav-link').forEach((link) => {
   });
 });
 
-function updateScrollUi(e) {
+// Close mobile navigation drawer when clicking outside
+document.addEventListener('click', (e) => {
+  const mobileNav = document.getElementById('mobile-nav-menu');
+  if (!mobileNav || !hamburger) return;
+  if (!mobileNav.classList.contains('open')) return;
+  if (mobileNav.contains(e.target) || hamburger.contains(e.target)) return;
+  closeMobileMenu();
+});
+
+function updateScrollUi() {
   if (mainNav) {
-    const currentScroll = (e && typeof e.animatedScroll === 'number') ? e.animatedScroll : window.scrollY;
+    const currentScroll = window.scrollY;
     if (currentScroll > 40) {
       mainNav.classList.add('scrolled');
     } else {
@@ -66,11 +75,7 @@ function updateScrollUi(e) {
   }
 }
 
-if (typeof lenis !== 'undefined') {
-  lenis.on('scroll', updateScrollUi);
-} else {
-  window.addEventListener('scroll', updateScrollUi, { passive: true });
-}
+window.addEventListener('scroll', updateScrollUi, { passive: true });
 
 if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
 
@@ -115,11 +120,9 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
   });
   }
 
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (!prefersReduced && typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
-    gsap.registerPlugin(ScrollTrigger);
-    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+  const isMobile = window.matchMedia('(max-width: 768px)').matches;
 
+  if (!prefersReducedMotion) {
     gsap.to('.cloud-left', {
       y: isMobile ? -55 : -110,
       x: isMobile ? -20 : -45,
@@ -260,7 +263,7 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     }
   );
 
-  if (!prefersReduced && !document.body.classList.contains('lite-mode')) {
+  if (!prefersReducedMotion && !document.body.classList.contains('lite-mode')) {
     const certSection = document.getElementById('certs');
     const primaryCert = document.querySelector('.cert-card--primary');
     if (certSection && primaryCert) {
@@ -335,7 +338,7 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
       { opacity: 1, y: 0, scale: 1, duration: 0.9, ease: 'power3.out' }, '-=0.6'
     );
 
-  if (!prefersReduced) {
+  if (!prefersReducedMotion) {
     gsap.to('.contact-fog-img', {
       y: -50,
       x: 30,
@@ -443,7 +446,7 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     }
   }
 
-  if (!prefersReduced) {
+  if (!prefersReducedMotion) {
     gsap.fromTo('.capability-row',
       { opacity: 0, y: 16 },
       {
@@ -545,15 +548,8 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
   }
 
   window.addEventListener('scroll', updateBtn, { passive: true });
-  if (typeof lenis !== 'undefined') {
-    lenis.on('scroll', updateBtn);
-  }
 
   btn.addEventListener('click', () => {
-    if (typeof lenis !== 'undefined') {
-      lenis.scrollTo(0, { duration: 1.4 });
-    } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 })();
